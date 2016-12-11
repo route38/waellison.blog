@@ -1,0 +1,34 @@
+// Site-specific customizations.
+
+.title
+  font-weight: bold
+
+aside
+  @include the-font-size($chain-sm)
+
+figcaption
+  @include the-font-size($chain-sm)
+
+a
+  color: $chain-blue
+
+.chain-hidden-print
+  @include hide-print   
+
+#page-navigation
+  text-align: center
+
+.highlight
+  border: 2px solid $chain-orange
+  width: 100%
+
+.yt-video-wide
+  padding-bottom: chain-aspect-ratio(16, 9)
+
+.yt-video-narrow
+  padding-bottom: chain-aspect-ratio(4, 3)
+
+.chain-big-icon
+  font-size: 48pt
+  display: flex
+  justify-content: center

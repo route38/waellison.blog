@@ -1,0 +1,21 @@
+// Gross hacks.
+
+figure, section, figcaption, aside
+  margin: 0
+  padding: 0
+  @include prefixer(margin-before, 0, webkit spec)
+  @include prefixer(margin-after, 0, webkit spec)
+  @include prefixer(margin-begin, 0, webkit spec)
+  @include prefixer(margin-end, 0, webkit spec)
+
+.img-responsive
+  width: 100%
+
+figure
+  display: table
+
+figcaption
+  display: table-caption
+  caption-side: bottom
+
+

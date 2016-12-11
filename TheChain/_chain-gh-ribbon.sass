@@ -1,0 +1,23 @@
+// A GitHub ribbon in pure HTML and CSS.
+$ribbon-color: $chain-orange
+$thread-color: $chain-white
+
+.chain-gh-ribbon
+  background-color: $ribbon-color
+  overflow: hidden
+  position: fixed
+  right: -3em
+  top: 3em
+  z-index: 38
+  @include transform(rotate(45deg))
+  a
+    color: white
+    display: block
+    font:
+      family: $chain-sans
+    @include the-font-size($chain-sm)
+    margin: 0.05em 0
+    padding: 0.5em 4em
+    text:
+      align: center
+      decoration: none

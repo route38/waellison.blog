@@ -1,0 +1,121 @@
+// Typography module.
+/*
+ * Typeface families.  Helvetica and Georgia are safe fallbacks.
+ */
+$chain-sans: "Helvetica Neue", "Arial", sans-serif
+$chain-serif: "Cormorant Garamond", "Georgia", serif
+$chain-mono: "Source Code Pro", monospace
+
+// Base size of all text.  This is set to a reasonable, legible default.  All
+// other text sizes are based on this, so be very careful.
+$chain-basesize: 14pt
+
+// Base line height of text.  Set this to something nice and legible.
+$chain-basemult: 1.500000
+
+@mixin base-line-height($size)
+  line-height: $size * $chain-basemult
+
+// Headings.  Heading sizes are declared in multiples of the base size,
+// with the largest (<h1>) at twice the size of body text.
+$chain-h1: 28pt
+$chain-h2: 24pt
+$chain-h3: 20pt
+$chain-h4: 16pt
+$chain-h5: 12pt
+$chain-h6: 12pt
+
+h2:first-child
+  margin-top: 0
+
+// Small elements.  Small element sizes are also declared in multiples of
+// the base size, with the smallest at 3/4 the size of body text.
+$chain-sm: 12pt
+$chain-vs: 10pt
+
+@mixin the-font-size($size)
+  font-size:   $size
+  @include base-line-height($size)
+
+// The optimizeLegibility setting has a bug on Chrome: it doesn't mix with
+// `text-transform: small-caps`.  This setting brings forth ligatures like `fi`
+// and `fl`, provided your typeface supports them.
+*
+  text-rendering: optimizeLegibility
+  color: $chain-black
+
+// Who'd have thought Microsoft would be leading the way on Web hyphenation?
+// The paragraph and list entry styles allow for hyphenation in browsers that
+// support it, e.g. Firefox, Safari, IE, Mobile Safari.
+// See <http://caniuse.com/#search=hyphenation> for particulars.
+blockquote p, p, li, caption, div
+  text-align: justify
+  @include prefixer(hyphens, auto, webkit ms moz spec)
+  @include prefixer(hyphenate-limit-chars, 7 3 3, ms)
+  @include prefixer(hyphenate-limit-zone, 5ex, ms)
+  @include the-font-size($chain-basesize)
+  font-weight: 400
+  font-family: $chain-serif
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6
+  font-family: $chain-serif
+  font-weight: 400
+  text-align: left
+  @include prefixer(hyphens, auto, webkit ms moz spec)
+
+a
+  text-decoration: none
+  &:hover
+    text-decoration: underline
+
+.chain-bold
+  font-weight: bold
+
+.chain-italic
+  font-style: italic
+
+.chain-offset-left
+  margin-left: 0.5ex
+
+pre, code
+  font-family: $chain-mono
+
+figcaption p, .caption
+  @include the-font-size($chain-sm)
+
+.toc
+  p
+    @include the-font-size($chain-sm)
+    line-height: 85%
+    margin-bottom: 0
+    &.level2
+      margin-left: 1.5rem
+    &.level3
+      margin-left: 3rem
+
+h1, .chain-h1
+  @include the-font-size($chain-h1)
+
+h2, .chain-h2
+  @include the-font-size($chain-h2)
+
+h3, .chain-h3
+  @include the-font-size($chain-h3)
+
+h4, .chain-h4
+  @include the-font-size($chain-h4)
+
+h5, .chain-h5
+  @include the-font-size($chain-h5)
+
+h6, .chain-h6
+  @include the-font-size($chain-h6)
+
+small, aside, .chain-sm
+  @include the-font-size($chain-sm)
+
+footer, .vs, .footnotes
+  @include the-font-size($chain-vs)
+
+body, .base-size
+  @include the-font-size($chain-basesize)

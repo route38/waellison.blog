@@ -1,0 +1,70 @@
+// Content layout.
+
+@mixin chain-container-pad
+  padding: 0 15px
+
+html
+  height: 100%
+
+body
+  display: flex
+  flex-direction: column
+  height: 100%
+  margin: 0
+  padding: 0
+  background-color: $chain-orange
+
+.chain-container
+  padding: 0 15px
+  margin: 0 auto
+  @include bulbasaur
+    width: 720px
+  @include ivysaur
+    width: 960px
+  @include venusaur
+    width: 1140px
+
+.site
+  flex: 1 0 auto
+  display: flex
+  flex-direction: column
+  justify-content: flex-start
+  
+.site-header
+  width: 100%
+  background-color: $chain-gray
+
+.site-footer
+  flex: 0 0 auto
+
+.blog
+  display: flex
+  @include egg
+    flex-flow: column wrap
+  flex-direction: row
+  flex-grow: 3
+  padding: 1rem 0
+  background-color: $chain-white
+
+.content
+  flex: 3 0 0
+  @include chain-container-pad
+
+.sidebar
+  flex: 1 0 0
+  @include chain-container-pad
+
+.about
+  display: flex
+  flex-direction: row
+  flex-flow: wrap
+  div
+    @include chain-container-pad
+    flex: 1 0 0
+    &:first-child
+      padding-left: 0
+    &:last-child
+      padding-right: 0
+
+.chain-wide-4
+  width: 25%

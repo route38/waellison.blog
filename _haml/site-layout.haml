@@ -1,0 +1,69 @@
+!!!
+%html
+  %head
+    %meta{charset: "utf-8"}
+    %title= "{{ site.name }} | {{ page.title }}"
+
+    -# Responsive stuff
+    %meta{content: "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible"}
+    %meta{content: "width=device-width, initial-scale=1.0", name: "viewport"}
+    -# End
+
+    %link{href: "http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css", rel: "stylesheet", type: "text/css"}
+    %link{href: "/TheChain/TheChain.css", rel: "stylesheet", type: "text/css"}
+
+    {% if page.image != empty %}
+    :css
+      .post-hero { background-image: url({{ page.image }}); }
+    {% endif %}
+    -# End
+  %body
+    .site.chain-container
+      %header.site-header
+        %nav
+          %span.title.chain-endmark.chain-h4{title: "tnwae.us"}
+            a
+          .navbar
+            %menu
+              %li
+                %a#home-link.extra{href: "/"} Home
+              %li
+                %a#resume-link.extra{href: "/resume"} Résumé
+              %li
+                %a#machines-link.extra{href: "//machineroom.tnwae.us"} Machine Room
+      .blog
+        %main.content
+          {{ content }}
+        %aside.sidebar
+          {% include sidebar.html %}
+      %footer.site-footer
+        .copyright
+          %p.chain-sm.meta
+            Copyright &copy; 2016 by W. Anthony Ellison.  Licensed under
+            =succeed "." do
+              %a{href: "/terms/#license"} various terms
+            Made with love in Knoxville using Sublime Text, Jekyll, and Gulp on Debian.  Part of
+            =succeed "." do
+              %a{href: "//marshproject.org"} Marsh Project
+          %p.chain-sm.meta
+            =succeed " • " do
+              %a{href: "/terms/"} Terms and conditions
+            %a{href: "/colophon/"} Colophon
+        .social
+          %div.hidden-print.socialbox
+            {% social_networks %}
+
+    -# We have to load webfontloader synchronously for it to work in the below scripts.
+
+    %script{src: "//ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"};
+    %script{src: "//ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"}
+    %script{src: "/js/rt38.js"}
+    %script{src: "/js/TheChain.js"}
+
+    :javascript
+      WebFont.load({
+        google: {
+          families: ['Cormorant Garamond:400,400italic,700',
+                     'Source Code Pro']
+        }
+      });

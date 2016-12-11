@@ -1,0 +1,19 @@
+%nav.navbar.navbar-default{role: "navigation"}
+  .container-fluid
+    .navbar-header
+      %button.navbar-toggle.collapsed{"data-toggle" => "collapse", "data-target" => "#r38-navbar", "aria-expanded" => "false"}
+        %span.sr-only Toggle navigation
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+      %span.title.chain-h4.navbar-brand
+        tnwae.us
+
+  .collapse.navbar-collapse#r38-navbar
+    %menu.navbar-nav.nav
+      %li
+        %a#home-link.extra{href: "/"} Home
+      %li
+        %a#about-link.extra{href: "/about"} About
+      %li
+        %a#colophon-link.extra{href: "/colophon"} Colophon

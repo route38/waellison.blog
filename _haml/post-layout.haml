@@ -1,0 +1,37 @@
+%article.post
+  %header
+    {% if page.image %}
+    .post-hero
+      %h1
+        %a{:href => "{{ post.url }}"} {{ page.title }}
+      %p {{ page.description }}
+    {% endif %}
+      
+  %main
+    %p.meta
+      Posted on 
+      %time.post-timestamp{:datetime => "{{ page.date | date_to_xmlschema }}"}
+        {% assign d = page.date | date: "%-d" %}
+        {% assign m = page.date | date: "%B"  %}
+        {% case m %}
+        {% when 'April' or 'May' or 'June' or 'July' %}{{ m }}
+        {% when 'September' %}Sept.
+        {% else %}{{ page.date | date: "%b" }}.
+        {% endcase %}
+        {% case d %}
+        {% when '1' or '21' or '31' %}{{ d }}<sup>st</sup>,
+        {% when '2' or '22' %}{{ d }}<sup>nd</sup>,
+        {% when '3' or '23' %}{{ d }}<sup>rd</sup>,
+        {% else %}{{ d }}<sup>th</sup>,
+        {% endcase %}
+        {{ page.date | date: "%Y" }}
+      by
+      %a{href: "/authors/{{ page.author }}"} {{ page.author }}
+    {{ content }}
+#page-navigation
+  {% if page.next.url %}
+  %a{:href => "{{page.next.url}}", :title => "Previous Post"} &lArr; &diams; {{page.next.title}}
+  {% endif %}
+  {% if page.previous.url %}
+  %a{:href => "{{page.previous.url}}", :title => "Next Post"} {{page.previous.title}} &rArr;
+  {% endif %}

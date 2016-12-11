@@ -1,0 +1,24 @@
+// Breakpoints for the responsive parts of Chain.  These are loosely based on
+// the equivalent Bootstrap breakpoints.  Note: If you want to redefine these,
+// feel free, but for best results, ensure that they're an even multiple of 12.
+
+// Extra small, for phones and ancient computers.  Also for SDTV.
+@mixin egg
+  @media (max-width: 731px)
+    @content
+
+// Small, for older tablets, phablets, slightly less ancient computers, and
+// other small devices.
+@mixin bulbasaur
+  @media (min-width: 732px)
+    @content
+
+// Medium, for most PCs at sane viewing widths, and tablets.
+@mixin ivysaur
+  @media (min-width: 972px)
+    @content
+
+// Large, for larger tablets and big PCs at large viewing widths.
+@mixin venusaur
+  @media (min-width: 1152px)
+    @content

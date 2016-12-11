@@ -1,0 +1,18 @@
+{% if page.github %}
+{% include gh-ribbon.html %}
+{% endif %}
+%article.post
+  %header
+    {% if page.image %}
+    .post-hero
+      %h1
+        %a{:href => "{{ post.url }}"} {{ page.title }}
+      %p {{ page.description }}
+    {% endif %}
+  {% if page.toc %}
+  %p.h4
+    Contents
+  .toc
+  {% endif %}
+  %main
+    {{ content }}

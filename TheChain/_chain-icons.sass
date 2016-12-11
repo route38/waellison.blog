@@ -1,0 +1,36 @@
+// Social network icons.
+@mixin icon-hover($color, $percentage: 20%)
+  color: white
+  background-color: $color
+  transition: background-color 0.5s ease
+  &:hover
+    background-color: darken($color, $percentage)
+    transition: background-color 0.5s ease
+    color: white
+    text-decoration: none
+
+.network
+  display: inline-block
+  font-size: 18pt
+  line-height: 120px
+  font-weight: 400
+  height: 100%
+  width: 28pt
+  text-align: center
+  text-decoration: none
+
+  $networks: (github: $github, twitter: $twitter, linkedin: $linkedin, bitbucket: $bitbucket, email: $email, medium: $medium, pinterest: $pinterest, instagram: $instagram)
+  @each $network in $networks
+    $k: nth($network, 1)
+    $v: nth($network, 2)
+    &.icon-#{$k}
+      color: white
+      background-color: $v
+ 
+.socialbox
+  height: 100%
+  display: flex
+  flex-direction: row
+  align-items: center
+  justify-content: flex-end
+  padding-right: 15px
