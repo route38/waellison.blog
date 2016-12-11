@@ -1,17 +1,14 @@
-# Route 38 _!!_
+# tnwae.us _!!_
 
 _Version 2.0.0 "Be OK"_
 
-Come on, you know you want to [![endorse](https://api.coderwall.com/tnwae/endorsecount.png)](https://coderwall.com/tnwae)
-this shit.
-
 Ooh, it's a blog!
 
-After an unexpected period of dormancy, Route 38 has emerged from
-cryopreservation all the better off.  Now featuring a sexy new layout
-(based on the sexy old layout) and a tremendous deployment script.
+100% Bootstrap-free.
 
 Built on Jekyll, Sass, CoffeeScript, Haml, Ruby, and love.
+
+Problems? Email <mail@tnwae.us>, but kindly keep it brief.  PGP upon request.
 
 ## Instructions for creating your own 38-like blog
 
@@ -21,9 +18,14 @@ Built on Jekyll, Sass, CoffeeScript, Haml, Ruby, and love.
 
 2.  Add your own posts, pages, and decor to taste.
 
-3.  Serve piping hot with Rake and a hot cup of the strongest coffee you
-    can buy.
+3.  Serve piping hot with your preferred deployment script.
 
 ## License for this shit
 
-CC BY-SA 3.0 for the posts, GPL 3.0 for "The Chain" framework, and WTFPL for anything else not marked.  Choose freedom.  Do what the fuck you want to.
+BSD 2-clause for the templates, scripts, and whatnot.
+
+CC BY-SA 4.0 for the content.
+
+CC BY-NC-ND 4.0 for the photos.
+
+WTFPL for anything I haven't mentioned.
