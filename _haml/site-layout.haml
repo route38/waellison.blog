@@ -20,38 +20,14 @@
   %body
     .site.chain-container
       %header.site-header
-        %nav
-          %span.title.chain-endmark.chain-h4{title: "tnwae.us"}
-            a
-          .navbar
-            %menu
-              %li
-                %a#home-link.extra{href: "/"} Home
-              %li
-                %a#resume-link.extra{href: "/resume"} Résumé
-              %li
-                %a#machines-link.extra{href: "//machineroom.tnwae.us"} Machine Room
+        {% include header.html %}
       .blog
         %main.content
           {{ content }}
         %aside.sidebar
           {% include sidebar.html %}
       %footer.site-footer
-        .copyright
-          %p.chain-sm.meta
-            Copyright &copy; 2016 by W. Anthony Ellison.  Licensed under
-            =succeed "." do
-              %a{href: "/terms/#license"} various terms
-            Made with love in Knoxville using Sublime Text, Jekyll, and Gulp on Debian.  Part of
-            =succeed "." do
-              %a{href: "//marshproject.org"} Marsh Project
-          %p.chain-sm.meta
-            =succeed " • " do
-              %a{href: "/terms/"} Terms and conditions
-            %a{href: "/colophon/"} Colophon
-        .social
-          %div.hidden-print.socialbox
-            {% social_networks %}
+        {% include footer.html %}
 
     -# We have to load webfontloader synchronously for it to work in the below scripts.
 
