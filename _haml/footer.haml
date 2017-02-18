@@ -1,14 +1,13 @@
-.copyright
-  %p.chain-sm.meta
-    Copyright &copy; 2016 by W. Anthony Ellison.  Licensed under
-    =succeed "." do
-      %a{href: "/terms/#license"} various terms
-    Made with love in Knoxville using Sublime Text, Jekyll, and Gulp on Debian.
-  %p.chain-sm.meta
-    =succeed " • " do
-      %a{href: "/terms/"} Terms and conditions
-    %a{href: "/privacy/"} Privacy policy
+.copyright.meta
+  :markdown
+    Copyright © 2017 by W. Anthony Ellison.  Licensed under
+    [various terms](/terms/#license).  Made with love and care
+    in Knoxville using [Vim](http://vim.org), [Jekyll](https://jekyll-rb.com),
+    and [Gulp](http://gulpjs.com) on [Slackware](http://www.slackware.com).
+
+    [Terms](/terms) &bull; [Colophon](/colophon) &bull; Version {% build_timestamp %}
 
 .social
   %div.hidden-print.socialbox
     {% social_networks %}
+
