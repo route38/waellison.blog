@@ -24,6 +24,7 @@ group :jekyll_and_deps do
   gem 'therubyracer', :platforms => :ruby
   gem 'liquid'
   gem 'jekyll'
+  gem 'git'
 end
 
 ## JEKYLL PLUGINS AVAILABLE AS GEMS

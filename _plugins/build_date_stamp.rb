@@ -3,6 +3,8 @@
 #
 # Licensed under CC0.  Do as you see fit.
 
+require "git"
+
 module Jekyll
   class BuildDateTag < Liquid::Tag
     def initialize(tag_name, text, tokens)
@@ -11,9 +13,12 @@ module Jekyll
     end
     
     def render(context)
-      Time.now.strftime("Built on %Y %b %d at %H:%M:%S.")
+      working_dir = Dir.getwd
+      git_repos = Git.open(working_dir)
+      git_hash = git_repos.object("HEAD^").sha[0..6]
+      Time.now.strftime("#{git_hash} (%Y-%b-%d/%H:%M)")
     end
   end
 end
 
-Liquid::Template.register_tag("build_date", Jekyll::BuildDateTag);
+Liquid::Template.register_tag("build_timestamp", Jekyll::BuildDateTag)
