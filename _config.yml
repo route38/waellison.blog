@@ -1,6 +1,6 @@
 # Bloggy particulars
 highlighter: "rouge"
-permalink: "/:year/:month/:title"
+permalink: "/updates/:year/:month/:title"
 name: "tnwae.us"
 description: "Hey, look, a blog! since 2016"
 future: false
@@ -16,9 +16,10 @@ sass:
   sass_dir: TheChain
   style: compressed
 
-url: http://tnwae.us
-paginate: 5
+url: https://tnwae.us
+paginate: 10
 excerpt_separator: "\n\n"
+paginate_path: "/updates/page:num/"
 
 # Personal particulars
 person:
@@ -31,8 +32,16 @@ social:
   twitter:   tnwae
   github:    tnwae
   instagram: t90photog
-  email:     mail@tnwae.us
   facebook:  tnwae
+  email:     mail@tnwae.us
+
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      author: "wae"
+      type: blog
 
 markdown: rdiscount
 encoding: UTF-8
@@ -45,15 +54,6 @@ exclude:
   - "Rakefile"
   - "Gemfile.lock"
   - "deploy.sh"
-
-# Templates
-post:
-  template: "_templates/post.md.tmpl"
-  extension: "md"
-
-page:
-  template: "_templates/page.md.tmpl"
-  extension: "md"
 
 # Other configs
 rdiscount:
