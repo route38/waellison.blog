@@ -24,6 +24,17 @@
       line-height: $chain-basesize
   margin-bottom: 1.5rem
 
+.infobox
+  display: flex
+  align-items: center
+  p.meta
+    padding: 0
+  img.contributor-thumb
+    margin: 0 0.5rem 0 0
+    height: 48px
+    width: auto
+    border-radius: 50%
+
 .post-excerpt
   padding: 1.0rem 0
   &:first-child
@@ -105,3 +116,15 @@ td
   border-top: 1pt solid black
   border-collapse: collapse
   padding: 0 4pt
+
+.chain-site-alert
+  background-color: $chain-blue
+  color: white
+  padding: 1rem
+  border-radius: 0.5rem
+  margin-bottom: 0.5rem
+  p
+    margin: 0
+  a:link, a:visited
+    color: white
+
