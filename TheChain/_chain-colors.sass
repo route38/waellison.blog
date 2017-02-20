@@ -17,6 +17,15 @@ $chain-realblack: #000000
 $chain-realgray: #7f7f7f
 $chain-realwhite: #ffffff
 
+$colors: ("orange": $chain-orange, "purple": $chain-purple, "blue": $chain-blue, "green": $chain-green, "yellow": $chain-yellow, "red": $chain-red, "white": $chain-white, "gray": $chain-gray, "black": $chain-black, "realblack": $chain-realblack, "realgray": $chain-realgray, "realwhite": $chain-realwhite)
+@each $color in $colors
+  $k: nth($color, 1)
+  $v: nth($color, 2)
+  .chain-#{$k}
+    color: #{$v}
+  .chain-bg-#{$k}
+    background-color: #{$v}
+
 // Spelling variants for our Brit/Canadian friends
 $chain-grey: $chain-gray
 $chain-realgrey: $chain-realgray
