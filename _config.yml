@@ -42,6 +42,7 @@ defaults:
     values:
       author: "wae"
       type: blog
+      image: "/art/lazy.png"
 
 markdown: rdiscount
 encoding: UTF-8
