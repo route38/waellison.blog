@@ -1,6 +1,10 @@
 .widget.recent-posts
-  %h3 Recent Posts
-  {{ posts | limit: 10 }}
+  %h3 Recent Updates
+  %ul
+    {% for post in site.posts %}
+    %li
+      %a{href: "{{ post.permalink }}"} {{ post.title }}
+    {% endfor %}
 
 .widget.ad
   %h3 Ad
