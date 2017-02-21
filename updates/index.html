@@ -1,16 +1,9 @@
 ---
-layout: default
+layout: portfolio
 title: Status Updates
 description: "Never miss a beat.  (Image credit: Takashi Toyooka/Flickr, BY-NC 2.0.)"
 image: "/art/newsstand.jpg"
 ---
-<div class='post-hero' style='margin-top: -25px'>
-  <h1>
-    <a href='{{ post.url }}'>{{ page.title }}</a>
-  </h1>
-  <p>{{ page.description }}</p>
-</div>
-
 {% for post in paginator.posts %}
   {% if post.type == "update" %}
   <article class='post post-excerpt'>
