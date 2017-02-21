@@ -7,12 +7,12 @@
     .post-hero
       %h1
         %a{:href => "{{ post.url }}"} {{ page.title }}
+      {% if page.description %}
       %p {{ page.description }}
+      {% endif %}
+    {% else %}
+    %h1
+      %a{:href => "{{ post.url }}"} {{ page.title }}
     {% endif %}
-  {% if page.toc %}
-  %p.h4
-    Contents
-  .toc
-  {% endif %}
   %main
     {{ content }}
