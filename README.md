@@ -36,7 +36,7 @@ To use the included code and build system here:
   * gulp-ruby-haml
   * gulp-coffee
   * gulp-sourcemaps
-  * gulp-coffee-lint
+  * gulp-coffeelint
   * gulp-sass-lint
   * gulp-uglify
   * gulp-clean-css
