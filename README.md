@@ -55,10 +55,8 @@ If you find a way to make RVM work on Slackware, that's nice.  Go blog about it 
 
 ## License for this shit
 
-BSD 2-clause for the templates, scripts, and whatnot.
+WTFPL for the code etc.
 
 CC BY-SA 4.0 for the content.
 
 CC BY-NC-ND 4.0 for the photos.
-
-WTFPL for anything I haven't mentioned.
