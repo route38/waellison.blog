@@ -1,23 +1,24 @@
-# tnwae.us _!!_
+# very special developments _!!_
 
-Hey, look, a blog!  The finest in nerd entertainment since 2016.  Sorta.
+Who's the best blogger?
 
-100% Bootstrap-free, built with Jekyll but with an external asset pipeline through Gulp.  The assets are built in full compliance with modern development standards and tools and are written as follows:
+<small>guess what it's you</small>
 
-* Transformation engine: Jekyll
-* Asset pipeline: Gulp
-* Templates: Haml/Liquid
-* Pages: Mostly Markdown, but a few plain HTML pages backported from other projects of mine
-* Stylesheets: Sass (whitespace-significant syntax, which I prefer)
-* Scripts: CoffeeScript
+(With apologies to SB Nation's Jon Bois, truly one of the luminaries of this generation.)
 
-Problems? Email <mail@tnwae.us> or start an issue on this project.
+vsdev.org is the finest in nerd entertainment since 2016.  PHP fucking blows, and Bootstrap -- at least for my purposes -- is a monument to bloat.
 
-## How to build
+Based in approximately 99% large part on my very closely related project, [tnwae.us](//github.com/tnwae/tnwae.us).  Created by a soundtrack consisting primarily of old Paul Simon albums and Thinkpad fan noise.
 
-The provided instructions have been tesed to work on Slackware 14.2 and probably work on other modern Linux distros and other Unix-like OSes such as the various BSDs.  They may work, with some slight changes, on macOS, but I do not use, condone the use of, or own a modern Macintosh to test it on.  I neither know nor care if these instructions will work on Windows, though you can use Ubuntu on Windows 10 (high likelihood of working) or perhaps Cygwin (untested and probably unlikely to work).
+Made with pride and more than a little technical bigotry on Slackware Linux.
 
-To use the included code and build system here:
+Problems?  Tough shit.  In all seriousness, email <mail@tnwae.us> or start an issue on this project if something looks funny.  If you want for some reason to guest post, do it as a pull request.
+
+## Come with me if you want to build!
+
+Much to my chagrin, I've tested these instructions on Ubuntu 16.04 LTS, and much more happily, I've also tested them on Slackware 14.2, both amd64.  Other Linuxes probably work, too, but I'm in the process of exorcising my home of all systemd-based Linuxes and so I don't know or care if it works on, say, Fedora or Debian.  I also don't know or care if this will work on macOS, Windows, Cygwin, Haiku, or the OS/2 box you dredged up from your employer's back room.  Ubuntu on Windows 10 *probably* works, but I've not tested it.
+
+The remainder of these instructions is almost verbatim from tnwae.us.  To use the included code and build system here:
 
 0.  Fork and clone this repository to your computer.
 
@@ -55,10 +56,8 @@ If you find a way to make RVM work on Slackware, that's nice.  Go blog about it 
 
 ## License for this shit
 
-BSD 2-clause for the templates, scripts, and whatnot.
+For the code (in ./COPYING), WTFPL.  Choose freedom, do what the fuck you want to.
 
 CC BY-SA 4.0 for the content.
 
 CC BY-NC-ND 4.0 for the photos.
-
-WTFPL for anything I haven't mentioned.
