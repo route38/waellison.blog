@@ -1,6 +1,8 @@
 The Chain
 =========
 
+Version 2.0 "Leaves That Are Green"
+
 _The Chain_ is a Sass theming framework ~~built on Bootstrap~~ built on
 flexbox and using Font Awesome, Bourbon, and Neat to make things look
 their best.
@@ -52,8 +54,9 @@ way to kill an afternoon.
 Attributions & Licensing
 ------------------------
 
-The Chain includes the syntax CSS originally written by Jekyll creator Tom Preston-Warner for his
-website.  
+The Chain includes the syntax CSS originally written by Jekyll creator
+Tom Preston-Warner for his website.  This came with 1.x releases of
+Jekyll, FWIW.
 
 The Chain is licensed under the terms of the GNU General Public License,
 version 3 or later.
