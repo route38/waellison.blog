@@ -1,0 +1,42 @@
+div.widget {
+  border: 1px solid $chain-gray;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  break-inside: avoid-column;
+  p, li, dd, dt {
+    @include the-font-size($chain-sm);
+  }
+  h2, h3 {
+    padding: 0;
+    margin: 0;
+    font-variant: small-caps;
+    border-bottom: 1px solid $chain-gray;
+    margin-bottom: 0.5rem;
+    i.fa {
+      color: $chain-orange;
+    }
+  }
+  h4 {
+    padding: 0;
+    margin: 0;
+    font-variant: small-caps;
+    font-weight: bold;
+  }
+  &:last-of-kind {
+    margin-bottom: 0;
+  }
+  ul {
+    margin-top: 0;
+    margin-left: 0;
+  }
+  dl {
+    dt {
+      border-bottom: 1px solid $chain-gray;
+      font-style: italic;
+      em {
+        font-style: normal;
+      }
+    }
+  }
+}
+

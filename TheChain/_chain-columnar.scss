@@ -1,0 +1,74 @@
+// THE CHAIN : A PURE-SASS FRAMEWORK FOR RESPONSIVE WEBSITES.
+// Copyright (C) 2013-2017 by W. Anthony Ellison.
+//
+// This program is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or (at
+// your option) any later version.
+//
+// This program is distributed in the hope that it will be useful, but
+// WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+// General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+///////////////////////////////////////////////////////////////////////
+// The columnar module lets you define columnar layouts.  Browsers
+// nowadays behave very consistently when it comes to CSS columns, and
+// for an example of this module in action, check out the index page
+// of tnwae.us.  
+///////////////////////////////////////////////////////////////////////
+
+///////////////////////////////////////////////////////////////////////
+// Define a columnar layout.  Prefixed for older browsers, but we
+// shouldn't need that (much) today.  caniuse says that 71.2% of
+// browsers support this unprefixed, with Firefox and Android WebView
+// making up much of the balance.
+@mixin columnar($n: 2) {
+  @include bulbasaur {
+    @include prefixer(column-count, $n, webkit moz ms o spec);
+  }
+}
+
+///////////////////////////////////////////////////////////////////////
+// WHY?: Suppress breaks of sections across columns.  I honestly can't
+// remember why I set this specifically for sections, and I will
+// probably remove it in a subsequent release of Chain.
+*[class^='chain-columnar'] {
+  section {
+    @include prefixer(column-break-inside, avoid, webkit moz ms o spec);
+    vertical-align: top;
+    display: inline-block;
+  }
+}
+
+///////////////////////////////////////////////////////////////////////
+// Remove and reset the margins for columnar lists.  We don't want list items
+// breaking across columns.
+ul[class^='chain-columnar'], ol[class^='chain-columnar'] {
+  @include bulbasaur {
+    margin-left: 0;
+  }
+  li {
+    @include prefixer(column-break-inside, avoid, webkit moz ms spec);
+    text-align: left;
+    margin-left: 3ex;
+    list-style-type: square;
+  }
+}
+
+///////////////////////////////////////////////////////////////////////
+// These three classes are predefined since they're used frequently.
+.chain-columnar2 {
+  @include columnar;
+}
+  
+.chain-columnar3 {
+  @include columnar(3);
+}
+
+.chain-columnar4 {
+  @include columnar(4);
+}

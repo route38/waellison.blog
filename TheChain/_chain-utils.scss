@@ -1,0 +1,49 @@
+// Utility classes.
+.chain-justify {
+  text-align: justify;
+}
+
+.chain-center {
+  text-align: center;
+}
+
+.chain-right {
+  text-align: right;
+}
+
+.chain-textsc {
+  font-variant: small-caps;
+}
+
+// DEPRECATED?
+ul.chain-inline-list {
+  list-style-type: none;
+  padding-left: 0;
+  margin-left: 0;
+  li {
+    margin-left: 0;
+    display: inline;
+    &:after {
+      content: " • ";
+    }
+    &:last-child:after {
+      content: none;
+    }
+    &.nobullet:after {
+      content: none;
+    }
+  }
+}
+
+.chain-pull-quote {
+  blockquote {
+    margin-bottom: 0;
+    border-color: $chain-orange;
+    p {
+      font-style: italic;
+      @include the-font-size($chain-h5);
+      text-align: left;
+      color: $chain-purple;
+    }
+  }
+}

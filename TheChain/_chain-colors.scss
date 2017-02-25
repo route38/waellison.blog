@@ -1,0 +1,82 @@
+// THE CHAIN : A PURE-SASS FRAMEWORK FOR RESPONSIVE WEBSITES.
+// Copyright (C) 2013-2017 by W. Anthony Ellison.
+//
+// This program is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or (at
+// your option) any later version.
+//
+// This program is distributed in the hope that it will be useful, but
+// WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+// General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+///////////////////////////////////////////////////////////////////////
+// I define several colors for use with Chain, and I also generate
+// classes to allow me to decorate elements with these colors as I
+// need to.  The choices made here allow me to make sites with a
+// a distinct, personalized color palette that reflects my brand and
+// personal preferences.
+///////////////////////////////////////////////////////////////////////
+
+$chain-orange:   #ec7600;
+$chain-purple:   #421a90;
+$chain-blue:     #0076ec;
+$chain-green:    #69901a;
+$chain-yellow:   #ecc200;
+$chain-red:      #ec0025;
+$chain-white:    #faf6ff;
+$chain-gray:     #7a767f;
+$chain-black:    #1c1b1e;
+
+
+///////////////////////////////////////////////////////////////////////
+// The following colors are pure black, 50% gray, and white.
+$chain-realblack: #000000;
+$chain-realgray:  #7f7f7f;
+$chain-realwhite: #ffffff;
+
+$colors: (
+  "orange": $chain-orange,
+  "purple": $chain-purple,
+  "blue": $chain-blue,
+  "green": $chain-green,
+  "yellow": $chain-yellow,
+  "red": $chain-red,
+  "white": $chain-white,
+  "gray": $chain-gray,
+  "black": $chain-black,
+  "realblack": $chain-realblack,
+  "realgray": $chain-realgray,
+  "realwhite": $chain-realwhite);
+
+@each $color in $colors {
+  $k: nth($color, 1);
+  $v: nth($color, 2);
+  .chain-#{$k} {
+    color: #{$v};
+  }
+  .chain-bg-#{$k} {
+    background-color: #{$v};
+  }
+}
+
+//////////////////////////////////////////////////////////////////////
+// Services named here are named only for the sake of identification,
+// and their presence is not meant to imply endorsement of any service
+// on my part or of this framework on theirs.
+$github:      #000;
+$twitter:     #00aced;
+$facebook:    #3b5998;
+$pinterest:   #cb2027;
+$google-plus: #dd4b39;
+$linkedin:    #007bb6;
+$bitbucket:   #2e3d54;
+$instagram:   #517fa4;
+$skype:       #125af4;
+$email:       $chain-purple;
+$medium:      #444;
+
