@@ -1,0 +1,3 @@
+[submodule "TheChain"]
+	path = TheChain
+	url = git@github.com:tnwae/TheChain
