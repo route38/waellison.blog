@@ -1,6 +1,6 @@
 # You have to put CS functions in the global namespace to be callable from the
 # page JS.  See http://stackoverflow.com/a/9254330 for particulars.
-window.rt38_make_page_toc = () ->
+window.TheBall_make_page_toc = () ->
   count =
     level1: -1
     level2: 0
