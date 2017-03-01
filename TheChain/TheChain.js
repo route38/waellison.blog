@@ -1,1 +1,0 @@
-var removeTrailingBullets=function(){$(function(){var e=!1;$(".chain-inline-list > li").each(function(){$(this).removeClass("nobullet"),e&&e.offset().top!=$(this).offset().top&&e.addClass("nobullet"),e=$(this)}).last().addClass("nobullet")})};window.addEventListener("resize",removeTrailingBullets),window.addEventListener("load",removeTrailingBullets);
