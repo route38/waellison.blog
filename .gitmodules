@@ -1,3 +1,6 @@
 [submodule "TheChain"]
 	path = TheChain
 	url = git@github.com:tnwae/TheChain
+[submodule "TheBall"]
+	path = TheBall
+	url = git@github.com:tnwae/TheBall
