@@ -19,7 +19,7 @@ const child = require('child_process');
 const clean_css = require('gulp-clean-css');
 
 const style_root = 'TheChain/TheChain.sass';
-const scripts = 'js/*.coffee';
+const scripts = 'TheBall/*.coffee';
 const scaffolds = '_haml/*.haml';
 
 const browser_sync = require('browser-sync').create();
@@ -49,19 +49,14 @@ gulp.task('scripts-debug', ['script-lint'], () => {
     .pipe(source_map.init())
     .pipe(coffee_script({bare: true}).on('error', gutil.log))
     .pipe(source_map.write())
-    .pipe(gulp.dest('js'));
-  gulp.src('TheChain/TheChain.js')
-    .pipe(gulp.dest('js'));
+    .pipe(gulp.dest('TheBall'));
 });
 
 gulp.task('scripts-deploy', ['script-lint'], () => {
   gulp.src(scripts)
     .pipe(coffee_script({bare: true}).on('error', gutil.log))
     .pipe(uglify({compress: true}))
-    .pipe(gulp.dest('js'));
-  gulp.src('TheChain/TheChain.js')
-    .pipe(uglify({compress: true}))
-    .pipe(gulp.dest('js'));
+    .pipe(gulp.dest('TheBall'));
 });
 
 gulp.task('scripts', ['scripts-debug'], () => {});
