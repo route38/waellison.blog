@@ -17,15 +17,13 @@
       .post-hero { background-image: url({{ page.image }}); }
     {% endif %}
     -# End
-  %body
-    .site.chain-container
+  %body.chain
+    .site.container
       %header.site-header
         {% include header.html %}
       .blog
         %main.content
           {{ content }}
-        %aside.sidebar
-          {% include sidebar.html %}
       %footer.site-footer
         {% include footer.html %}
 
@@ -33,13 +31,13 @@
 
     %script{src: "//ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"};
     %script{src: "//ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"}
-    %script{src: "/js/rt38.js"}
-    %script{src: "/js/TheChain.js"}
+    %script{src: "/TheBall/TheBall.js"}
 
     :javascript
       WebFont.load({
         google: {
-          families: ['Cormorant Garamond:400,400italic,700',
-                     'Source Code Pro']
+          families: ['Alegreya:400,400i,700',
+                     'Montserrat:200,200i,900,900i',
+                     'PT Mono']
         }
       });
