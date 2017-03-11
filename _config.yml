@@ -1,8 +1,8 @@
 # Bloggy particulars
 highlighter: "rouge"
-permalink: "/updates/:year/:month/:title"
-name: "tnwae.us"
-description: "Hey, look, a blog! since 2016"
+permalink: "/:year/:month/:title"
+name: "Very Special Developments"
+description: "Home of one of those condescending Unix computer users since 2017"
 future: false
 
 gems: ["jekyll-paginate"]
@@ -16,10 +16,9 @@ sass:
   sass_dir: TheChain
   style: compressed
 
-url: https://tnwae.us
+url: https://vsdev.org
 paginate: 10
 excerpt_separator: "\n\n"
-paginate_path: "/updates/page:num/"
 
 # Personal particulars
 person:
@@ -31,8 +30,6 @@ person:
 social:
   twitter:   tnwae
   github:    tnwae
-  instagram: t90photog
-  facebook:  tnwae
   email:     mail@tnwae.us
 
 defaults:
@@ -41,7 +38,6 @@ defaults:
       path: ""
     values:
       author: "wae"
-      type: blog
       image: "/art/lazy.png"
 
 markdown: rdiscount
@@ -49,8 +45,6 @@ encoding: UTF-8
 exclude: 
   - "node_modules"
   - "gulpfile.js"
-  - "Route 38.sublime-project"
-  - "Route 38.sublime-workspace"
   - "Gemfile"
   - "Rakefile"
   - "Gemfile.lock"
