@@ -15,6 +15,8 @@
       %p.meta
         Posted on 
         %time.post-timestamp{:datetime => "{{ page.date | date_to_xmlschema }}"}
+          =succeed "," do
+            {{ page.date | date: "%A" }}
           {% assign d = page.date | date: "%-d" %}
           {% assign m = page.date | date: "%B"  %}
           {% case m %}
@@ -31,7 +33,30 @@
           {{ page.date | date: "%Y" }}
         by
         %a{href: "/authors/{{ page.author }}"} {{ page.author }}
+        ({{ content | number_of_words }} words)
     {{ content }}
+    %footer
+      %p.meta
+        Bookmark the
+        %a{href: "{{ page.permalink }}"} Permalink
+        if that suits you.  Filed under
+        =succeed "." do
+          %em {{ page.category }}
+        {% if page.music %}
+        &bull;
+        %i.green.fa.fa-music
+        {{ page.music }}
+        {% endif %}
+        {% if page.mood %}
+        &bull;
+        %i.purple.fa.fa-meh-o
+        {{ page.mood }}
+        {% endif %}
+        {% if page.mood %}
+        &bull;
+        %i.black.fa.fa-coffee
+        {{ page.coffee }}
+        {% endif %}
 #page-navigation
   {% if page.next.url %}
   %a{:href => "{{page.next.url}}", :title => "Previous Post"} &lArr; {{page.next.title}}
