@@ -3,7 +3,7 @@ layout: portfolio
 title: "Colophon"
 description: "How tnwae.us was made, from server to surfer and from film grains to written posts. (Photo: tnwae.us)"
 permalink: "/colophon/"
-image: "/art/desk.jpg"
+image: "/art/heroes/desk.jpg"
 ---
 
 This site is written and produced by W. Anthony Ellison.  I do my own
@@ -13,43 +13,101 @@ to get away with ~~being lazy~~ not doing so.
 
 ## Type
 
-This site is set using _Cormorant Garamond_ by Christian Thalmann.
-Monospaced text is set in _Source Code Pro_ by Adobe.
+This site is set in _Alegreya_ by Huerta Tipográfica and _Montserrat_ by Julieta
+Ulanovsky.  Monospaced text is set in _PT Mono_ by Paratype.
 
 Icons originate from _Font Awesome_ by Dave Gandy and contributors.
 
 ## Tools
 
-My primary computer is a 2013 Lenovo IdeaPad P400 Touch, which runs
-Slackware Linux 14.2 and runs two solid-state drives, 16 GB of RAM, and
-a quad-core Intel Core i7.
+My primary computer is a 2009 Intel Xeon-based workstation running
+Slackware Linux 14.2.
 
-My workstation is a 2009 Intel X58 gaming PC with the Intel Xeon X5650
-and 24 GB of RAM, featuring Slackware Linux 14.2 also.
+My primary laptop is a 2013 Chromebook Pixel LTE running the latest
+release of Chrome OS.
 
-My office's file server is a Q77 mini-ITX machine based on the Core
-i3-2100 processor and running Debian Linux 8.7.
+My smartphone is a 2015 Samsung Galaxy S5 Active on the AT&T network.
 
-My work computer is a 2008 Lenovo ThinkPad X200 based on the Core 2 Duo
-P8400 and running Windows 7 Pro SP1.
+My software toolset consists of:
 
-My toys include six PowerPC Macs (five of them laptops) and one 68k Mac.
-They mostly run Apple operating systems, but my orange iBook G4 runs
-Debian 8.7.
+<ul class='chain-columnar2'>
+  <li>Developer Tools
+    <ul class='chain-columnar2'>
+      <li>Vim
+      <li>Konsole
+      <li>Z Shell
+      <li>Git
+      <li>Jekyll
+      <li>Gulp
+      <li>Rake
+      <li>GCC
+      <li>GDB
+      <li>Valgrind
+    </ul>
+  </li>
+  <li>Languages
+    <ul class='chain-columnar2'>
+      <li>Ruby
+      <li>C++
+      <li>JavaScript
+      <li>Bash
+      <li>Sass
+      <li>Haml
+      <li>Markdown
+    </ul>
+  </li>
+  <li>Email and Internet
+    <ul>
+      <li>Claws-Mail
+      <li>Google Chrome
+      <li><tt>wget</tt>
+    </ul>
+  </li>
+  <li>Privacy and Security
+    <ul>
+      <li>VeraCrypt
+      <li>GnuPG
+      <li>Kleopatra
+    </ul>
+  </li>
+  <li>Online Services
+    <ul>
+      <li>GitHub
+      <li>Gmail
+      <li>Google Drive
+      <li>Google Play Music
+    </ul>
+  </li>
+  <li>Multimedia
+    <ul>
+      <li>GIMP
+      <li>Audacity
+    </ul>
+  </li>
+  <li>System
+    <ul>
+      <li><tt>rsync</tt>
+      <li>SlackBuild
+    </ul>
+  </li>
+</ul>
+
+I also have several other computers, including a ThinkPad I use for work
+and an iBook G4 I use for writing.
 
 ## Server Software
 
-`tnwae.us` is hosted on a Linode virtual private server.  I use Ubuntu
-Linux and Apache to host my sites, and MariaDB as my backing store for
-WordPress.
+`vsdev.org` is hosted on a Linode virtual private server with Ubuntu Linux,
+Apache, and MariaDB.  Other sites on this server are built on WordPress, but
+this one is built with the Jekyll site generator.
 
 ## Production Notes
 
-`tnwae.us` is prepared on my Slackware laptop.  I test for rendering
-performance in Firefox and Chromium, which is usually enough.  I
-synchronize changes via `rsync` and store my code on GitHub.
+`vsdev.org` is prepared on my various computers, using Slackware Linux and a
+cloud-based virtual server running Debian, with working state synchronized via
+Git.  I upload changes to the site via `rsync`.
 
-My Jekyll environment:
+My Jekyll environment includes:
 
 * Markdown: RDiscount
 * Highlighting: Rouge
@@ -58,14 +116,9 @@ My Jekyll environment:
 * Scripts: CoffeeScript compiled by Gulp
 * Stylesheets: Sass compiled by Gulp
 
-I wrote the template myself, but it was, at least initially, largely
-based on the default Jekyll template from the old 1.x branch.  Post text
-is written in Markdown.
-
-The theme is based on a framework called _The Chain_, which is a Sass
-theme framework I wrote for this site.  It uses the latest CSS
-technologies such as flexbox and hyphenation to achieve a simple, yet
-sophisticated, appearance.
+The theme is based on a framework called _The Chain_, which is a Sass theme
+framework I wrote for this site.  It uses the latest CSS technologies such as
+flexbox and hyphenation to achieve a simple, yet sophisticated, appearance.
 
 ### Web standards
 
