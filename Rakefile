@@ -3,7 +3,7 @@ task :gulp_preview do
 end
 
 task :serve do
-  system "jekyll serve --watch"
+  system "jekyll serve --watch --host 0.0.0.0"
 end
 
 multitask :preview => [:gulp_preview, :serve]
