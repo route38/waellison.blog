@@ -1,7 +1,7 @@
 .widget.recent-posts
   %h3 Recent Updates
   %ul
-    {% for mypost in site.posts %}
+    {% for mypost in site.posts | limit: 7 %}
     %li
       %a{href: "{{ mypost.url }}"} {{ mypost.title }}
     {% endfor %}
