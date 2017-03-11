@@ -1,192 +1,53 @@
 ---
-layout: portfolio
-title: "My Status Page"
-image: "/art/pbg3-desk.jpg"
+layout: default
+title: Blog
 ---
-<div class='chain-site-alert'>
-  <i class='fa fa-hand-o-right chain-alert-finger'></i>
-  <p>The email address
-  <a class='alert-link' href='mailto:wae@rt38.net'>wae@rt38.net</a> is going away on April 15, 2017.  Please update your address book to my personal email address at <a class='alert-link' href='mailto:mail@tnwae.us'>mail@tnwae.us</a>.
+{% for post in paginator.posts %}
+  <article class='post post-excerpt'>
+    <header class='post-header'>
+      <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
+      <p class='meta'>
+        Posted
+        <time class='post-timestamp' datetime='{{ post.date | date_to_xmlschema }}'>
+          {% assign d = post.date | date: "%-d" %}
+          {% assign m = post.date | date: "%B"  %}
+          <span class='month'>{% case m %}
+          {% when 'April' or 'May' or 'June' or 'July' %}{{ m }}
+          {% when 'September' %}Sept.
+          {% else %}{{ post.date | date: "%b" }}.
+          {% endcase %}</span>
+          <span class='day'>{% case d %}
+          {% when '1' or '21' or '31' %}{{ d }}<sup>st</sup>,
+          {% when '2' or '22' %}{{ d }}<sup>nd</sup>,
+          {% when '3' or '23' %}{{ d }}<sup>rd</sup>,
+          {% else %}{{ d }}<sup>th</sup>,
+          {% endcase %}</span>
+          <span class='year'>{{ post.date | date: "%Y" }}</span>
+        </time>
+        by <a href='/authors/{{ post.author }}'>{{ post.author }}</a>,
+        ca. {{ post.content | reading_time }} minute read
+      </p>
+    </header>
+    <div class='excerpt'>
+      {{ post.excerpt }}
+    </div>
+  </article>
+{% endfor %}
+{% if paginator.total_pages > 1 %}
+<div id='page-navigation' class="pagination">
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Previous</a>
+  {% else %}
+    <span>&laquo; Previous</span>
+  {% endif %}
+
+  &bull;
+
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
+  {% else %}
+    <span>Next &raquo;</span>
+  {% endif %}
 </div>
+{% endif %}
 
-<div class='status-container chain-columnar2'>
-  <div class='widget haps-widget'>
-    <h3><i class='fa fa-newspaper-o'></i> Happenings</h3>
-    <!--
-      This is why I like Jekyll more than most people, and almost as
-      much as a strong cuppa.
-    -->
-    {% for mypost in site.posts | limit: 3 %}
-      <h4><a href='{{ mypost.url }}'>{{ mypost.title }}</a> &mdash; {{ mypost.date | date: "%b. %Y" }}</h4>
-      {{ mypost.excerpt }}
-    {% endfor %}
-  </div>
-
-  <div class='widget reading-widget'>
-    <h3><i class='fa fa-book'></i> Recent Reading</h3>
-    <dl class='reading-list'>
-      <dt class='book'>
-        <em class='book-title'>On Writing Well</em> by
-        <span class='author'>William Zinsser</span>
-      </dt>
-      <dd>
-        An excellent guide to writing nonfiction.  I make it a point to
-        read this one at least every year.
-      </dd>
-
-      <dt class='book'>
-        <em class='book-title'>Getting Things Done</em> by
-        <span class='author'>David Allen</span>
-      </dt>
-      <dd>
-        The ultimate masterwork of modern productivity.  If you're too
-        busy to read this book, that's why you need to read it.
-      </dd>
-
-      <dt class='book'>
-        <em class='book-title'>Red Storm Rising</em> by
-        <span class='author'>Tom Clancy</span>
-      </dt>
-      <dd>
-        A wonderful tale of tension and terror in the late Soviet era.
-        Dated, but still wonderful.
-      </dd>
-    </dl>
-  </div>
-  <!--<div class='widget gaming-widget'>
-    <h3><i class='fa fa-gamepad'></i> Recent Video Games</h3>
-    <dl class='game-list'>
-      <dt>Pok&eacute;mon Moon (3DS)</dt>
-      <dd>
-        The last major title I bought.  I wasn't overly impressed.  X
-        was way better.
-      </dd>
-                  
-      <dt>Pok&eacute;mon Red (3DS VC)</dt>
-      <dd>
-        I'd rather play this than Moon, which is really saying something
-        for this mainstay of my youth.
-      </dd>
-                  
-      <dt>Wii Sports</dt>
-      <dd>
-        For a 11-year-old collection of minigames, it's still surprisingly
-        fresh.  I think it's because it's so approachable.  Wii Bowling,
-        in particular, is one of the reasons I keep my Wii plugged up.
-      </dd>
-                  
-      <dt>Tecmo Super Bowl (NES)</dt>
-      <dd>
-        The ultimate 2D football game, and &mdash; thanks to Bo Jackson
-        &mdash; the only football game where I'll pick the Raiders.  Need
-        I say more?
-      </dd>
-    </dl>
-  </div>-->
-  <div class='widget music-widget'>
-    <h3><i class='fa fa-headphones'></i> Recent Albums</h3>
-    <dl class='game-list'>
-      <dt>Bridge Over Troubled Water (1970, Columbia)</dt>
-      <dd>
-        The last Simon &amp; Garfunkel album, and in many ways, the
-        best.
-      </dd>
-                  
-      <dt>Still Crazy After All These Years (1975, Columbia)</dt>
-      <dd>
-        My favorite Paul Simon album, along with <em>Graceland</em>.
-      </dd>
-
-      <dt>Speakerboxxx/The Love Below (2004, Arista)</dt>
-      <dd>
-        A mammoth OutKast album, still as fresh and relevant as it was
-        13 years ago.
-      </dd>
-
-      <dt>Lungs (2009, Moshi Moshi)</dt>
-      <dd>
-        Florence + the Machine's freshman effort and one of my favorite
-        albums ever pressed.  &hearts;
-      </dd>
-    </dl>
-  </div>
-  <div class='widget computer-widget'>
-    <h3><i class='fa fa-desktop'></i> Recent OS Installs</h3>
-    <p>
-      Confused?  Check out my computer list at <a href='https://vsdev.org/computers'>vsdev.org</a>.
-    </p>
-    <dl class='os-list'>
-      <dt>Slackware 14.2 (amd64)</dt>
-      <dd>
-        On Elbrus.  My first serious attempt at using Slack.  I
-        <em>almost</em> like it better than Debian.  Almost.
-      </dd>
-                  
-      <dt>Ubuntu 16.04 LTS (amd64)</dt>
-      <dd>
-        On Sagarmatha.  Configured for security with an encrypted root
-        hard drive and an encrypted home directory.  Is it overkill?
-        Probably not.
-      </dd>
-
-      <dt>Debian 8 (powerpc)</dt>
-      <dd>
-        On the Dome.  Performance is tolerable, especially considering how
-        old the laptop is.  Linux almost offers better driver support
-        than Apple.  Almost.
-      </dd>
-
-      <dt>OpenBSD 5.9 (macppc)</dt>
-      <dd>
-        On Vinson.  Performance is... ugh.  X is practically unusable
-        (well, at least XFCE is; something very barebones like Fluxbox
-        would be much better, I think).
-      </dd>
-    </dl>
-  </div>
-  <div class='widget trading-post-widget'>
-    <h3><i class='fa fa-handshake-o'></i> Trading Post</h3>
-    <h4>For Sale (starting 3/1/17)</h4>
-    <ul>
-      <li>Assorted computer parts, $5-20 each, including video
-          cards, memory, cables, etc.  I'm clearing out the clutter, my
-          loss is your gain.
-		    		  	    
-      <li>Assorted 35 mm cameras, including SLRs, P&amp;S, and
-          rangefinders. Brands include Canon and Minolta, priced to
-          sell.  $5-50 each, will offer discounts.
-
-      <li>Canon T90 with Focusing Screens C &amp; E, 60-T3 remote,
-          50/1.8 FDn lens.  $100, negotiable.
-		    		  	    
-      <li>Several vinyl records, single albums $3, double albums $6.
-          Email me for a list.  List includes pop, soundtracks, easy
-          listening.
-		    		  	    
-      <li>A handful of books available on business, photography,
-          programming, and Formula One, including college textbooks.
-          $2-30 depending on title and subject, inquire for list.
-    </ul>
-
-    <h4>For Purchase (as budget permits)</h4>
-    <ul>
-      <li>DDR3-1066 or 1333 SO-DIMMs, 8 GB set, compatible with
-          ThinkPad X200, G.Skill or Crucial preferred
-
-      <li>Canon FD 24/2.8 SSC, 35/2.0 SSC, 200/2.8 SSC, and
-          300/4 New FD camera lenses
-
-      <li>200GB MicroSD card, SanDisk or Samsung preferred
-
-      <li>Lenovo ThinkPad Battery 47++ (9 cells) for X200 series
-          (not tablet)
-
-      <li>Vinyl records, all sizes (no 78's),  contact
-          me for a list of what I'm currently interested in
-      
-      <li>Canon AE-1 or AT-1 camera body, preferably with no lens.
-
-      <li>Dell Latitude 2120 laptop and good battery
-    </ul>
-  </div>
-</div>
