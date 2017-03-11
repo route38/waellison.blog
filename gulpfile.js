@@ -101,7 +101,7 @@ gulp.task('jekyll', ['sass', 'scripts', 'haml'], jekyll_build);
 // Build everything and watch for changes.  This is for debug builds.
 gulp.task('watch', ['haml', 'sass-debug', 'scripts-debug'], () => {
   gulp.watch(scaffolds, ['haml']);
-  gulp.watch('TheChain/**/*.sass', ['sass-debug']);
+  gulp.watch('TheChain/**/*.s{a,c}ss', ['sass-debug']);
   gulp.watch(scripts, ['scripts-debug']);
 });
 
