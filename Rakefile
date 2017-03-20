@@ -9,11 +9,21 @@ end
 multitask :preview => [:gulp_preview, :serve]
 task :default => [:preview]
 
-task :gulp_deploy do
+task :build do
   system "gulp jekyll"
 end
 
-task :deploy => [:gulp_deploy] do
+task :deploy => [:build] do
   system "./deploy.sh"
+end
+
+task :update do
+  system "bundle update"
+  system "yarn upgrade"
+end
+
+task :init do
+  system "bundle install"
+  system "yarn install"
 end
 
