@@ -1,19 +1,52 @@
-task :gulp_preview do
-  system "gulp"
+namespace :site do
+  desc "Only run Gulp previews."
+  task :gulp_preview do
+    system "gulp"
+  end
+
+  desc "Build the site, copy it to the local server, and watch for changes."
+  task :serve do
+    system "jekyll build --watch -d /var/www/html"
+  end
+
+  desc "Clean up the build products and the server directory."
+  task :clean do
+    site_clean
+  end
+
+  desc "Run Gulp and serve the site concurrently."
+  multitask :preview => [:gulp_preview, :serve] do
+    site_clean
+  end
+  task :default => [:preview]
+
+  desc "Build the site and its assets."
+  task :build do
+    system "gulp jekyll"
+  end
+
+  desc "Deploy the site to the production server."
+  task :deploy => [:build] do
+    system "./deploy.sh"
+  end
 end
 
-task :serve do
-  system "jekyll serve --watch"
+def site_clean
+  system "jekyll clean"
+  system "./cleanup.sh"
 end
 
-multitask :preview => [:gulp_preview, :serve]
-task :default => [:preview]
+namespace :deps do
+  desc "Update build dependencies."
+  task :update do
+    system "bundle update"
+    system "yarn upgrade"
+  end
 
-task :gulp_deploy do
-  system "gulp jekyll"
-end
-
-task :deploy => [:gulp_deploy] do
-  system "./deploy.sh"
+  desc "Install build dependencies.  Install Bundle (Ruby) and Yarn (NPM) first."
+  task :init do
+    system "bundle install"
+    system "yarn install"
+  end
 end
 
