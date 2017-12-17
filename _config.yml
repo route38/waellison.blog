@@ -5,7 +5,7 @@ name: "tnwae.us"
 description: "Hey, look, a blog! since 2016"
 future: false
 
-gems: ["jekyll-paginate"]
+plugins: ["jekyll-paginate"]
 
 collections:
   contributors:
@@ -26,14 +26,19 @@ person:
   name: W. Anthony Ellison
   email: mail@tnwae.us
   occupation: Rubyist &amp; Blogger
-  phone: 865-630-2564
+  phone: 865-730-2564
 
 social:
-  twitter:   tnwae
-  github:    tnwae
-  instagram: t90photog
-  facebook:  tnwae
-  email:     mail@tnwae.us
+  networks:
+    linkedin:  tnwae
+    pinterest: t90photog
+    github:    tnwae
+    twitter:   tnwae
+    email:     mail@tnwae.us
+  options:
+    email:     envelope-o
+    pinterest: pinterest-p
+    github:    github-alt
 
 defaults:
   -
@@ -49,12 +54,11 @@ encoding: UTF-8
 exclude: 
   - "node_modules"
   - "gulpfile.js"
-  - "Route 38.sublime-project"
-  - "Route 38.sublime-workspace"
   - "Gemfile"
   - "Rakefile"
   - "Gemfile.lock"
   - "deploy.sh"
+  - "cleanup.sh"
 
 # Other configs
 rdiscount:
