@@ -13,39 +13,33 @@ _tnwae.us_ is a production of W. Anthony Ellison, including stylesheets,
 scripts, templates, and most of the photography.  Photos not by me are
 attributed when they need to be.
 
-tnwae.us is copyright &copy; 2016 by W. Anthony Ellison, with some rights
-reserved per the licensing below.
+tnwae.us is copyright &copy; 2016-2017 by W. Anthony Ellison, with some
+rights reserved per the licensing below.
 
 ## Disclaimers
 
-The content here presented does not represent the position, strategies,
-or opinions of my employer.  Additionally, my thoughts, opinions, and
+The content presented here does not represent the position, strategies,
+or opinions of my employer(s).  Additionally, my thoughts, opinions, and
 beliefs change from time to time, which is a necessary consequence of
-having an open mind.
-
-Accordingly, this weblog is intended to provide a transparent,
-semi-permanent snapshot and manifestation of the various ideas within my
-mind.  As such, thoughts and opinions expressed in outdated posts may
-not be the same, or even similar, to views I hold today.
+having an open mind.  Accordingly, this website is intended to provide a
+transparent, semi-permanent snapshot and manifestation of the various
+ideas within my mind.  As such, thoughts and opinions expressed in
+outdated posts may not be the same as, or even similar to, views that I
+hold today.
 
 All data and information provided on tnwae.us is for informational
-purposes  only.  I make no representation as to the accuracy,
+purposes only.  I make no representation as to the accuracy,
 completeness, currency, suitability, or validity of any information on
 this site and will not be liable for any errors, omissions, or delays in
 this information or any losses, injuries, or damages arising from its
-display or use.  _All information is provided on an as-is basis and in
-good faith._
+display or use.  All information provided here is provided on an as-is
+basis.
 
 <h2 id='license'>License</h2>
 
-There are three licenses covering this site.
-
-Textual content (articles and pages) is licensed according to the CC
-[Attribution-ShareAlike 4.0 International][cc-by-sa-4.0] License.
-
-Photographic content (by me) is licensed according to the CC
-[Attribution-NonCommercial-NoDerivatives 4.0
-International][cc-by-nc-nd-4.0] License.
+This website's textual and photographic content is licensed under the
+terms of the Creative Commons [Attribution-NonCommercial-NoDerivatives
+4.0 International][cc-by-nc-nd-4.0] License.
 
 Computer code (i.e., scripts, layouts, stylesheets, code snippets, etc.)
 is licensed as follows:
@@ -88,6 +82,13 @@ If I deem it worthy of responding to, I'll do my best to get back to you
 within 36 hours.  I work an odd schedule in my usual job, so I can't
 always get to the computer in time, and I don't answer emails from my
 phone.
+
+My GnuPG thumbprint is 0xBC774615, and my public key is [available
+locally](/etc/mailtnwaeus.asc) and [at the MIT keyserver][mit-pks].  I
+only send signed emails so that you know that any time you receive an
+email from me, it is guaranteed to be from me.
+
+[mit-pks]: https://pgp.mit.edu/pks/lookup?op=get&search=0xFAF390DCBC774615
 
 You can also send me a message on Twitter or LinkedIn if that's more
 your style.
