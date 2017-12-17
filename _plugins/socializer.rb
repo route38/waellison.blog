@@ -69,7 +69,8 @@ module Jekyll
     end
     
     def render(context)
-      networks = context.registers[:site].config["social"]
+      networks = context.registers[:site].config["social"]["networks"]
+      options = context.registers[:site].config["social"]["options"]
       retval = ""
       
       networks.each do |network, user|
@@ -86,11 +87,17 @@ module Jekyll
         href  = $all_networks[name] % user
 
         network_sanitized = network.gsub(/_/, '-')
-        unless network == "email" then
-          klass = "network icon-#{network_sanitized} fa fa-#{network_sanitized}"
-        else
-          klass = "network icon-email fa fa-envelope"
+
+        icon_name = case
+          when options.has_key?(network)
+            options[network]
+          when network == "email"
+            "envelope"
+          else
+            network_sanitized
         end
+
+        klass = "network icon-#{network_sanitized} fa fa-#{icon_name}"
         
         retval += "    <a href='#{href}' class='#{klass}'></a>\n"
       end
@@ -101,3 +108,4 @@ module Jekyll
 end
 
 Liquid::Template.register_tag("social_networks", Jekyll::SocialNetworkTag)
+
