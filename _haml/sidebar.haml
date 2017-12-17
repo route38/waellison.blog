@@ -1,13 +1,8 @@
-.widget.recent-posts
+.chain-widget.recent-posts
   %h3 Recent Updates
   %ul
-    {% for mypost in site.posts %}
+    {% for mypost in site.posts | limit: 7 %}
     %li
       %a{href: "{{ mypost.url }}"} {{ mypost.title }}
     {% endfor %}
-
-.widget.ad
-  %h3 Ad
-  %a{href: "https://slackware.com", target: "_blank", rel: "nofollow"}
-    %img.img-responsive{src: "/art/ads/slackware.png", title: "Slackware: Because nothing else comes close.  Download today!", alt: "Slackware: Demand excellence, demand Slack.  Download today!"}
 
