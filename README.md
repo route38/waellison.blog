@@ -1,6 +1,6 @@
 # very special developments _!!_
 
-Version 3.0 "Fifty Ways to Peeve Your Blogger"
+Version 4.0 "The Obvious Blog"
 
 vsdev.org is the finest in nerd entertainment since 2016.  PHP fucking
 blows, and Bootstrap -- at least for my purposes -- is a monument to
@@ -9,9 +9,6 @@ bloat.
 Based in approximately 99% large part on my very closely related
 project, [tnwae.us](//github.com/tnwae/tnwae.us).  Created with a
 soundtrack consisting primarily of old Paul Simon albums.
-
-Proudly made on a Chromebook Pixel since 2017.  Shit's awesome, you
-should try it.
 
 Problems?  Tough shit.  In all seriousness, email <mail@tnwae.us> or
 start an issue on this project if something looks funny.  If you want
@@ -44,12 +41,12 @@ build system here:
 
 ## A wee note to fellow Slackers
 
-I couldn't make RVM work on my Slackware installation, so instead I just
-used the bundled Ruby (2.2.5p319) and installed the binary package for
-the LTS version of Node (6.9.5) off `/opt/local/node`, modifying my path
-accordingly.  So I could install packages in my home directory, I set
-$GEM_HOME and $GEM_PATH both to `"$HOME/.gem"`, allowing me to run Gem
-programs from the command line.
+I couldn't make RVM work on my Slackware 14.2 installation, so instead I
+just used the bundled Ruby (2.2.5p319) and installed the binary package
+for the LTS version of Node (6.9.5) off `/opt/local/node`, modifying my
+path accordingly.  So I could install packages in my home directory, I
+set `$GEM_HOME` and `$GEM_PATH` both to `"$HOME/.gem"`, allowing me to run
+Gem programs from the command line.
 
 If you find a way to make RVM work on Slackware, that's nice.  Go blog
 about it or something, because I don't really care.
