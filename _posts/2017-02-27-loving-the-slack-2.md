@@ -6,6 +6,8 @@ description: "Still not as much of a pain in the ass as email."
 music: "Ingrid Michaelson &mdash; “Soldier”"
 mood: relieved
 category: Linux
+
+permalink: "/archives/292"
 ---
 
 I'd recently installed Ubuntu 16.04 LTS on [Sagarmatha](/computers#sagarmatha),
