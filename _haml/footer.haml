@@ -1,10 +1,21 @@
 .copyright.meta
-  :markdown
-    Copyright © 2017 by W. Anthony Ellison. &bull; 
-    [Terms](/terms) &bull; [Colophon](/colophon) &bull;
-    Valid <i class='fa fa-html5'></i> and <i class='fa fa-css3'></i>
+  %p.chain-sm
+    Copyright &copy; 2013-2018 by
+    = succeed "." do
+      %a{href: "//tnwae.us"} W. Anthony Ellison
+    All rights reserved.
+    %br
+    %a{href: "/terms"} Terms
+    &bull;
+    %a{href: "/taxonomy"} Index
+    &bull;
+    %a{href: "/colophon"} Colophon
+    &bull;
+    Valid
+    %i.fa.fa-html5
+    and
+    %i.fa.fa-css3
 
 .social
   %div.hidden-print.socialbox
     {% social_networks %}
-
