@@ -7,6 +7,9 @@
       {% if page.description %}
       %p {{ page.description }}
       {% endif %}
+    {% else %}
+    %h1
+      %a{:href => "{{ post.url }}"} {{ page.title }}
     {% endif %}
       
   %main
@@ -39,23 +42,23 @@
       %p.meta
         Bookmark the
         %a{href: "{{ page.permalink }}"} Permalink
-        if that suits you.  Filed under
+        if you wish.  This post filed under
         =succeed "." do
-          %em {{ page.category }}
+          %a{href: "/taxonomy/\#{{ page.category | slugify }}"} {{ page.category }}
         {% if page.music %}
         &bull;
         %i.green.fa.fa-music
-        {{ page.music }}
+        &nbsp;{{ page.music }}
         {% endif %}
         {% if page.mood %}
         &bull;
         %i.purple.fa.fa-meh-o
-        {{ page.mood }}
+        &nbsp;{{ page.mood }}
         {% endif %}
-        {% if page.mood %}
+        {% if page.coffee %}
         &bull;
         %i.black.fa.fa-coffee
-        {{ page.coffee }}
+        &nbsp;{{ page.coffee }}
         {% endif %}
 #page-navigation
   {% if page.next.url %}
