@@ -2,10 +2,10 @@
 highlighter: "rouge"
 permalink: "/:year/:month/:title"
 name: "Very Special Developments"
-description: "Home of one of those condescending Unix computer users since 2017"
+description: "technical ramblings by an ex-technologist"
 future: false
 
-gems: ["jekyll-paginate"]
+plugins: ["jekyll-paginate"]
 
 collections:
   contributors:
@@ -28,9 +28,16 @@ person:
   phone: 865-630-2564
 
 social:
-  twitter:   tnwae
-  github:    tnwae
-  email:     mail@tnwae.us
+  networks:
+    github:    tnwae
+    pinterest: t90photog
+    email:     mail@tnwae.us
+    linkedin:  tnwae
+    twitter:   tnwae
+  options:
+    pinterest: pinterest-p
+    email:     envelope-o
+    github:    github-alt
 
 defaults:
   -
@@ -38,7 +45,8 @@ defaults:
       path: ""
     values:
       author: "wae"
-      image: "/art/lazy.png"
+      image: "//files.tnwae.us/heroes/the_desktop.jpg"
+      coffee: "Yes"
 
 markdown: rdiscount
 encoding: UTF-8
