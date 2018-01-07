@@ -1,17 +1,12 @@
 .copyright.meta
-  %p
-    %a{href: "//vim.org"}
-      %img{src: "/art/buttons/vim.gif", alt: "Made with Vim.  I &hearts; my editor.", title: "Made with Vim.  I &hearts; my editor."}
-    %a{href: "http://slackware.com"}
-      %img{src: "/art/buttons/slackware.gif", alt: "Made on Slackware.", title: "Made on Slackware."}
-    %a{href: "http://gulpjs.com"}
-      %img{src: "/art/buttons/gulp.png", alt: "Gulp built and deployed.", title: "Built and deployed with Gulp.js."}
-
-  :markdown
-    Copyright © 2017 by W. Anthony Ellison. &bull; 
-    [Terms](/terms)
-
-.social
-  %div.hidden-print.socialbox
-    {% social_networks %}
-
+  %p.chain-sm
+    Copyright &copy; 2013-2018 by
+    = succeed "." do
+      %a{href: "//tnwae.us"} W. Anthony Ellison
+    All rights reserved.
+    %br
+    %a{href: "/terms"} Terms
+    &bull;
+    %a{href: "/taxonomy"} Index
+    &bull;
+    %a{href: "/colophon"} Colophon
