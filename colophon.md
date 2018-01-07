@@ -13,108 +13,132 @@ to get away with ~~being lazy~~ not doing so.
 
 ## Type
 
-This site is set in _Alegreya_ by Huerta Tipográfica and _Montserrat_ by Julieta
-Ulanovsky.  Monospaced text is set in _PT Mono_ by Paratype.
+This site is set in _Alegreya_ by Huerta Tipográfica and _Montserrat_ by
+Julieta Ulanovsky.  Monospaced text is set in _PT Mono_ by Paratype.
 
 Icons originate from _Font Awesome_ by Dave Gandy and contributors.
 
 ## Tools
 
-My primary computer is a 2009 Intel Xeon-based workstation running
-Slackware Linux 14.2.
+I have gone to great pains as of early 2018 to simplify my computing
+environment, though my work in this area is forever ongoing.  For legacy
+software, I run three legacy operating systems, while for day-to-day
+computing, I run two more, and I run two different server OSes as well.
 
-My primary laptop is a 2013 Chromebook Pixel LTE running the latest
-release of Chrome OS.
+My usual client OSes are Microsoft Windows 10 and Arch Linux.  Legacy systems
+I use include Mac OS 9.2.2, Mac OS X 10.7.5, and Microsoft Windows 2000 SP4.
+And on the server, I run Debian and Ubuntu Server.  I also use an iPhone that
+runs the latest version of iOS 11.
 
-My smartphone is a 2015 Samsung Galaxy S5 Active on the AT&T network.
+As far as hardware goes, I run a custom-built desktop and server, two Apple
+laptops, and two Lenovo laptops.  There's more information about my
+[computers](/computers) elsewhere on the site.
 
-My software toolset consists of:
+My toolchain is larger than I thought it to be and consists of a mix of
+proprietary and free tools.
 
 <ul class='chain-columnar2'>
+  <li>Operating Systems
+    <ul>
+      <li>Microsoft Windows 10
+      <li>Microsoft Windows 2000
+      <li>Debian Linux
+      <li>macOS 10.7.5 "Lion"
+      <li>Arch Linux
+    </ul>
+  </li>
   <li>Developer Tools
-    <ul class='chain-columnar2'>
-      <li>Vim
-      <li>Konsole
+    <ul>
+      <li>Sublime Text
+      <li>NetBeans
       <li>Z Shell
       <li>Git
       <li>Jekyll
       <li>Gulp
       <li>Rake
-      <li>GCC
-      <li>GDB
-      <li>Valgrind
+      <li>gcc/gdb
     </ul>
   </li>
-  <li>Languages
-    <ul class='chain-columnar2'>
-      <li>Ruby
-      <li>C++
-      <li>JavaScript
-      <li>Bash
-      <li>Sass
-      <li>Haml
-      <li>Markdown
-    </ul>
-  </li>
-  <li>Email and Internet
+  <li>Email, Office, and Internet
     <ul>
-      <li>Claws-Mail
       <li>Google Chrome
-      <li><tt>wget</tt>
+      <li>Microsoft Word 2016
+      <li>Microsoft Excel 2016
+      <li>Microsoft Outlook 2016
     </ul>
   </li>
-  <li>Privacy and Security
-    <ul>
-      <li>VeraCrypt
-      <li>GnuPG
-      <li>Kleopatra
-    </ul>
-  </li>
-  <li>Online Services
+  <li>Cloud Services
     <ul>
       <li>GitHub
       <li>Gmail
-      <li>Google Drive
-      <li>Google Play Music
+      <li>Microsoft OneDrive
+      <li>Dropbox
+      <li>Apple Music
     </ul>
   </li>
   <li>Multimedia
     <ul>
-      <li>GIMP
-      <li>Audacity
+      <li>iTunes
+      <li>CCCP
     </ul>
   </li>
-  <li>System
+  <li>3D and Photo
     <ul>
-      <li><tt>rsync</tt>
-      <li>SlackBuild
+      <li>Adobe Photoshop CC
+      <li>Adobe Lightroom CC
+      <li>Adobe Illustrator CS2
+      <li>Adobe DNG Converter
+      <li>VueScan
+      <li>DAZ Studio
+      <li>DAZ Hexagon
+      <li>DAZ Bryce
+      <li>LuxRender
+      <li>Luxus for Studio
+      <li>NVIDIA Iray
+    </ul>
+  </li>
+  <li>Mobile Apps
+    <ul>
+      <li>Apple Music
+      <li>Simplenote
+      <li>Safari
+      <li>Strava
+      <li>Microsoft Outlook
+    </ul>
+  </li>
+  <li>Chrome Extensions
+    <ul>
+      <li>uBlock Origin
+      <li>LastPass
     </ul>
   </li>
 </ul>
 
-I also have several other computers, including a ThinkPad I use for work
-and an iBook G4 I use for writing.
-
 ## Server Software
 
-`vsdev.org` is hosted on a Linode virtual private server with Ubuntu Linux,
-Apache, and MariaDB.  Other sites on this server are built on WordPress, but
-this one is built with the Jekyll site generator.
+VSDev is hosted by [Linode](https://linode.com) at their datacenter in
+Dallas, Texas, centrally located for most of North America.  It is powered
+by Ubuntu Server with Apache, MariaDB, and PHP7 though this site only needs
+an HTTP server since it is built with Jekyll rather than WordPress.
 
 ## Production Notes
 
-`vsdev.org` is prepared on my various computers, using Slackware Linux and a
-cloud-based virtual server running Debian, with working state synchronized via
-Git.  I upload changes to the site via `rsync`.
+VSDev is prepared on a virtual machine running Debian, with working state
+stored backed up to GitHub and my local file server.  Jekyll is the engine
+powering the site, though I use an asset pipeline external to Jekyll via
+the Gulp library for Node.  Most operations only require the use of Rake,
+via [a custom Rakefile](https://github.com/tnwae/vsdev.org/blob/master/Rakefile),
+to perform.  Deployment is performed through a shell script that only requires
+`rsync` to run.
 
-My Jekyll environment includes:
+My Jekyll/Gulp environment includes the following libraries and conventions:
 
 * Markdown: RDiscount
 * Highlighting: Rouge
-* Asset pipeline: External through Gulp.js
-* Templates: Haml compiled to HTML via Gulp
-* Scripts: CoffeeScript compiled by Gulp
-* Stylesheets: Sass compiled by Gulp
+* Asset pipeline: External (via Gulp)
+* Templates: Haml compiled to HTML5
+* Scripts: CoffeeScript compiled to JavaScript
+* Stylesheets: Sass compiled to CSS3
 
 The theme is based on a framework called _The Chain_, which is a Sass theme
 framework I wrote for this site.  It uses the latest CSS technologies such as
@@ -123,4 +147,7 @@ flexbox and hyphenation to achieve a simple, yet sophisticated, appearance.
 ### Web standards
 
 Web standards are vitally important.  If this site looks like crap in your
-chosen browser, choose a different browser.
+chosen browser, choose a different browser.  (Seriously, they're all at
+least decent these days, even Microsoft Edge.  There's no excuse not to
+use a good browser.)  If you still use Internet Explorer, I will laugh
+at you.
