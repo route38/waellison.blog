@@ -3,6 +3,7 @@ _site
 *~
 Thumbs.db
 Gemfile.lock
+yarn.lock
 vendor
 .sass-cache
 jrowl.rb
@@ -20,4 +21,5 @@ TheChain/TheChain.css
 TheBall/TheBall.js
 .gitignore
 .directory
+node_modules
 
