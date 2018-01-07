@@ -1,99 +1,12 @@
 ---
 layout: portfolio
 title: "My Status Page"
-image: "//files.tnwae.us/heroes/ktown.jpg"
-description: "Image credit: Me"
+image: "//files.tnwae.us/heroes/photogdesk.jpg"
 ---
-<div class='chain-site-alert'>
-  <i class='fa fa-handshake-o chain-yellow chain-alert-finger'></i>
-  <p>Hey!  I'm looking for a job.  If you need someone who can program,
-  write, tolerate Microsoft Office, or make coffee, then hit me up.  I'm
-  at <a class='alert-link' href='mailto:mail@tnwae.us'>mail@tnwae.us</a>.
-  I'm also on LinkedIn at <a class='alert-link'
-  href='https://linkedin.com/in/tnwae'>/in/tnwae</a>.  If you'd prefer
-  to call, email me first for my phone number.
-</div>
-
 <div class='status-container chain-columnar2'>
-  <div class='chain-widget haps-widget'>
-    <h3><i class='fa fa-newspaper-o'></i> Happenings</h3>
-    {% for mypost in site.posts limit: 3 %}
-      <h4><a href='{{ mypost.url }}'>{{ mypost.title }}</a> &mdash; {{ mypost.date | date: "%b. %Y" }}</h4>
-      {{ mypost.excerpt }}
-    {% endfor %}
-  </div>
-
-  <div class='chain-widget music-widget'>
-    <h3><i class='fa fa-headphones'></i> Recent Albums</h3>
-    <dl class='album-list'>
-      <dt>There Goes Rhymin' Simon (1973/Columbia)</dt>
-      <dd>
-        Making its rounds on my turntable once more.  Features my
-        favorite Paul Simon love song that isn't "Kathy's Song."
-      </dd>
-
-      <dt>Aja (1977/ABC)</dt>
-      <dd>
-        A masterpiece of jazz rock, featuring my favorite Steely Dan
-        song of all time, "Deacon Blues."
-      </dd>
-
-      <dt>Lungs (2009/Moshi Moshi)</dt>
-      <dd>
-        Back in rotation, because I love Florence + the Machine.
-      </dd>
-
-      <dt>The Joshua Tree (1987/Island)</dt>
-      <dd>
-        The only U2 album I care about, even slightly.
-      </dt>
-    </dl>
-  </div>
-  <div class='chain-widget computer-widget'>
-    <h3><i class='fa fa-desktop'></i> Recent OS Installs</h3>
-    <p>
-      Confused?  Check out my computer list at
-      <a href='https://vsdev.org/computers'>vsdev.org</a>.
-      (Page under construction.)
-    </p>
-    <dl class='os-list'>
-      <dt>KDE Neon</dt>
-      <dd>
-        On Sagarmatha.  I'm trying to find something to use it for.
-      </dd>
-    </dl>
-  </div>
-  <div class='chain-widget books-widget'>
-    <h3><i class='fa fa-book'></i> Recent Books</h3>
-    <dl class='book-list'>
-      <dt>Jane Eyre (Charlotte Bront&edia;, 1847)</dt>
-      <dd>
-        A coming-of-age tale about the rare liberated Victorian woman.
-        I'm getting a lot more out of this one as an adult than I did as
-        a dumb teenager.
-      </dd>
-      <dt>What Color Is Your Parachute? (Richard Bolles, 2012)</dt>
-      <dd>
-        The best career advice there is, period.
-      </dd>
-    </dl>
-  </div>
-  <div class='chain-widget trading-post-widget'>
-    <h3><i class='fa fa-handshake-o'></i> Trading Post</h3>
-    <h4>For Purchase (as budget permits)</h4>
-    <ul>
-      <li>Canon FD 24/2.8 SSC, 35/2.0 SSC, and 200/2.8 SSC camera lenses
-
-      <li>DDR3-1333 8 GB DIMM, low-density, Crucial Ballistix Sport.
-      I'm after three of these.
-
-      <li>Vinyl records (20/25/30 cm), singles, EPs, and LPs.  I'm
-        interested in anything on
-        <a href='/etc/vinyl-interests'>this page</a>.
-      
-      <li>Canon AE-1 or AT-1 camera body, preferably with no lens.
-      
-      <li>Other things listed on <a href='/etc/wanted/'>this page</a>.
-    </ul>
-  </div>
+  {% include haps-homepage-widget.html %}
+  {% include music-homepage-widget.html %}
+  {% include books-homepage-widget.html %}
+  {% include trading-post-homepage-widget.html %}
 </div>
+
