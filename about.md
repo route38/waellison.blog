@@ -3,7 +3,7 @@ layout: portfolio
 title: "Wow, a whole page, just about me!"
 description: "Here you can learn about me."
 permalink: "/about/"
-image: "//assets.marshproject.org/heroes/thinkpad-chromebook.jpg"
+image: "//files.tnwae.us/KnoxvilleNightTraffic.jpg"
 ---
 <div class='about-section about'>
   <div class='about-education'>
