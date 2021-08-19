@@ -1,0 +1,95 @@
+// THE CHAIN : A PURE-SASS FRAMEWORK FOR RESPONSIVE WEBSITES.
+// Copyright (C) 2013-2018 by W. Anthony Ellison.
+//
+// This program is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or (at
+// your option) any later version.
+//
+// This program is distributed in the hope that it will be useful, but
+// WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+// General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+///////////////////////////////////////////////////////////////////////
+// Site-specific customizations for Chain.  These will be lightly
+// documented, if at all.
+///////////////////////////////////////////////////////////////////////
+
+.title {
+  font-weight: bold;
+}
+
+aside, figcaption {
+  @include the-font-size($chain-sm);
+}
+
+a {
+  color: $chain-blue;
+}
+
+a:active {
+  color: $chain-red;
+}
+
+.chain-hidden-print {
+  @include hide-print;
+}
+
+#page-navigation {
+  text-align: center;
+}
+
+.highlight {
+  border: 2px solid $chain-orange;
+  width: 100%;
+}
+
+///////////////////////////////////////////////////////////////////////
+// Part of a solution for responsive YouTube videos, this one for
+// widescreen videos.
+.yt-video-wide {
+  padding-bottom: chain-aspect-ratio(16, 9);
+}
+
+///////////////////////////////////////////////////////////////////////
+// Part of a solution for responsive YouTube videos, this one for
+// standard-aspect videos.
+.yt-video-narrow {
+  padding-bottom: chain-aspect-ratio(4, 3);
+}
+
+///////////////////////////////////////////////////////////////////////
+// Small, gray descriptions of HTTP errors on 404 etc.
+.chain-error-description {
+  @include the-font-size($chain-vs);
+  color: $chain-gray;
+  font-style: italic;
+  text-align: left;
+}
+
+///////////////////////////////////////////////////////////////////////
+// Big-ass icon, as seen on https://tnwae.us/authors/wae.
+.chain-big-icon {
+  font-size: 48pt;
+  display: flex;
+  justify-content: center;
+}
+
+.infobox {
+  display: flex;
+  align-items: center;
+  p.meta {
+    padding: 0;
+  }
+  img.contributor-thumb {
+    margin: 0 0.5rem 0 0;
+    height: 60px;
+    width: auto;
+    border-radius: 50%;
+  }
+}
+

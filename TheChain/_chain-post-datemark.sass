@@ -1,0 +1,61 @@
+// THE CHAIN : A PURE-SASS FRAMEWORK FOR RESPONSIVE WEBSITES.
+// Copyright (C) 2013-2018 by W. Anthony Ellison.
+//
+// This program is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or (at
+// your option) any later version.
+//
+// This program is distributed in the hope that it will be useful, but
+// WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+// General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+///////////////////////////////////////////////////////////////////////
+// This is a weird old timestamp thing that I hacked up back in '12
+// and tried adding to Chain.  There's still some bugs here and
+// and probably some edge cases where it doesn't exactly work.
+///////////////////////////////////////////////////////////////////////
+
+.post-timestamp
+   display: block
+   position: absolute
+   height: 56pt
+   width: 62pt
+   border: 1pt solid black
+   float: left
+   line-height: 12pt
+   font-family: $chain-sans
+   bottom: 15px
+   right: 15px
+   background-color: white
+   .dow {
+      display: block
+      height: 12pt
+      position: absolute
+      bottom: 4pt 
+      left: 4pt
+   .month
+      position: absolute
+      top: 4pt
+      left: 4pt
+      width: 1px
+      word-wrap: break-word
+      text-align: center
+      text-transform: uppercase
+      display: block
+   .day
+      color: $chain-orange
+      display: block
+      font-size: 42pt
+      line-height: 42pt
+      position: absolute
+      top: 0
+      right: 0
+   .year
+      position: absolute
+      bottom: 4pt
+      right: 4pt

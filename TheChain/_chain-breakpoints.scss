@@ -1,0 +1,63 @@
+// THE CHAIN : A PURE-SASS FRAMEWORK FOR RESPONSIVE WEBSITES.
+// Copyright (C) 2013-2018 by W. Anthony Ellison.
+//
+// This program is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or (at
+// your option) any later version.
+//
+// This program is distributed in the hope that it will be useful, but
+// WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+// General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+///////////////////////////////////////////////////////////////////////
+// There are three width breakpoints for Chain.  These are very
+// loosely based on what Twitter opted to use for Bootstrap, optimized
+// for certain threshold display sizes.  I don't take into account
+// pixel density, since browsers report logical pixel sizes instead
+// of actual pixel sizes, e.g. on a Retina MacBook Pro, the browser
+// reports a full-screen viewport of 1440x900px rather than the true
+// 2880x1800px screen size.  The smallest breakpoint is also a decent
+// choice for smartphones, as it happens, and the next-smallest is a
+// decent choice for small tablets.
+//
+// These mixins are used to define custom behaviors at the stated
+// viewport sizes, usually in relation to element flow and layouts.
+///////////////////////////////////////////////////////////////////////
+
+///////////////////////////////////////////////////////////////////////
+// Extra small, for phones and ancient computers.  Also for SDTV.
+@mixin egg {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+
+///////////////////////////////////////////////////////////////////////
+// Small, for older tablets, phablets, slightly less ancient computers,
+// and other small devices.
+@mixin bulbasaur {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+//////////////////////////////////////////////////////////////////////
+// Medium, for most PCs at sane viewing widths, and tablets.
+@mixin ivysaur {
+  @media (min-width: 900px) {
+    @content;
+  }
+}
+
+//////////////////////////////////////////////////////////////////////
+// Large, for larger tablets and big PCs at large viewing widths.
+@mixin venusaur {
+  @media (min-width: 1152px) {
+    @content;
+  }
+}

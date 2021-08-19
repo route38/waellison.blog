@@ -1,0 +1,170 @@
+// THE CHAIN : A PURE-SASS FRAMEWORK FOR RESPONSIVE WEBSITES.
+// Copyright (C) 2013-2018 by W. Anthony Ellison.
+//
+// This program is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or (at
+// your option) any later version.
+//
+// This program is distributed in the hope that it will be useful, but
+// WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+// General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+///////////////////////////////////////////////////////////////////////
+// The layout module is the very soul of Chain, for in this one file of
+// a hundred or so lines of SCSS, Flexbox allows me to replace the one
+// reason I continued to use Bootstrap.  Common tunables here include
+// the background color and the behavior of the breakpoints.
+///////////////////////////////////////////////////////////////////////
+@mixin chain-container-pad {
+  padding: 0 15px;
+}
+
+///////////////////////////////////////////////////////////////////////
+// The following two sets of declarations allow us to get a sticky
+// footer with less effort than ever before.  The rest of the sticky
+// footer goodness is in .site-footer, below.
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: $chain-orange;
+}
+
+///////////////////////////////////////////////////////////////////////
+// A container class for the whole site.  All of your content lives
+// here: headers, footers, everything.
+.chain {
+  .container {
+    margin: 0 auto;
+    @include bulbasaur {
+      width: 720px;
+    }
+    @include ivysaur {
+      width: 960px;
+    }
+    @include venusaur {
+      width: 1140px;
+    }
+  }
+}
+
+///////////////////////////////////////////////////////////////////////
+// This container, within .chain.container, is what pushes the footer
+// down to the bottom of the page.
+.site {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.site-header {
+  background-color: $chain-gray;
+}
+.site-footer {
+  flex: 0 0 auto;
+}
+
+///////////////////////////////////////////////////////////////////////
+// This is where your content lives.  The class name reflects its
+// original use.
+.blog {
+  display: flex;
+  @include egg {
+    flex-flow: column wrap;
+  }
+  flex-direction: row;
+  flex-grow: 3;
+  background-color: $chain-white;
+}
+
+.ad {
+  @include chain-container-pad;
+  background-color: $chain-white;
+}
+
+///////////////////////////////////////////////////////////////////////
+// I structure my content with a right-side sidebar, and this is where
+// the magic happens for the content layout.  Adjust the numbers to
+// taste; divide the first figure in flex below by the sum of it and
+// .sidebar's flex figure to get the proportion (in my case, 75%) of
+// content to sidebar.
+.content {
+  flex: 3 0 0;
+  @include chain-container-pad;
+}
+
+.sidebar {
+  flex: 1 0 0;
+  @include chain-container-pad;
+  padding-top: 15px;
+}
+
+///////////////////////////////////////////////////////////////////////
+// For an about-box container, and the child divs associated with it.
+.about {
+  display: flex;
+  flex-direction: row;
+  flex-flow: wrap;
+  div {
+    @include chain-container-pad;
+    flex: 1 0 0;
+    &:first-child {
+      padding-left: 0;
+    }
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+}
+
+
+///////////////////////////////////////////////////////////////////////
+// The chain-wide-n classes, 2 <= n <= 5, allow you to set the width of
+// an element to the relevant figure.  The figure in the class name is
+// the denominator of the relevant fraction.  If you need an
+// intermediate width, e.g. 2/5 or 3/8, define it yourself and put it
+// here.
+.chain-wide-2 {
+  width: 50%;
+}
+
+.chain-wide-3 {
+  width: 33.3333%;
+}
+
+.chain-wide-4 {
+  width: 25%;
+}
+
+.chain-wide-5 {
+  width: 20%;
+}
+
+///////////////////////////////////////////////////////////////////////
+// Pull an element to the right and keep it there.
+// TODO: Fix this to have 100% width on mobile.
+.chain-right, .chain-pull-right {
+  float: right;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+}
+
+///////////////////////////////////////////////////////////////////////
+// TODO: Move this class elsewhere, probably to customizations.
+.chain-alert-finger {
+  @include the-font-size($chain-basesize);
+  display: block;
+  float: left;
+  margin-right: 5px;
+}
