@@ -1,0 +1,76 @@
+// THE CHAIN : A PURE-SASS FRAMEWORK FOR RESPONSIVE WEBSITES.
+// Copyright (C) 2013-2018 by W. Anthony Ellison.
+//
+// This program is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or (at
+// your option) any later version.
+//
+// This program is distributed in the hope that it will be useful, but
+// WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+// General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+///////////////////////////////////////////////////////////////////////
+// I define several colors for use with Chain, and I also generate
+// classes to allow me to decorate elements with these colors as I
+// need to.  The choices made here allow me to make sites with a
+// a distinct, personalized color palette that reflects my brand and
+// personal preferences.
+///////////////////////////////////////////////////////////////////////
+
+// Social network icons.
+@mixin icon-hover($color, $percentage: 20%) {
+  color: white;
+  background-color: $color;
+  transition: background-color 0.5s ease;
+  &:hover {
+    background-color: darken($color, $percentage);
+    transition: background-color 0.5s ease;
+    color: white;
+    text-decoration: none;
+  }
+}
+
+.network {
+  display: flex;
+  font-size: 18pt;
+  font-weight: 400;
+  height: 100%;
+  text-align: center;
+  text-decoration: none;
+  align-items: center;
+  padding: 0 5pt;
+
+  $networks: (
+    github: $github,
+    facebook: $facebook,
+    twitter: $twitter,
+    linkedin: $linkedin,
+    bitbucket: $bitbucket,
+    email: $email,
+    medium: $medium,
+    pinterest: $pinterest,
+    instagram: $instagram);
+
+  @each $network in $networks {
+    $k: nth($network, 1);
+    $v: nth($network, 2);
+    &.icon-#{$k} {
+      color: white;
+      background-color: $v;
+    }
+  }
+}
+ 
+.socialbox {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+}
+
