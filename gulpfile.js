@@ -18,8 +18,6 @@ const coffee_lint   = require('gulp-coffeelint');
 const sass_lint     = require('gulp-sass-lint');
 const uglify        = require('gulp-uglify');
 const child         = require('child_process');
-const clean_css     = require('gulp-clean-css');
-const browser_sync  = require('browser-sync').create();
 const style_root    = 'TheChain/TheChain.sass';
 const scripts       = 'TheBall/*.coffee';
 const scaffolds     = '_haml/*.haml';
@@ -87,7 +85,8 @@ gulp.task('sass-lint', () => {
 // Build Sass, development-style.
 gulp.task('sass-debug', ['sass-lint'], () => {
   return gulp.src(style_root)
-    .pipe(sass({sourcemap: true}).on('error', sass.logError))
+    .pipe(source_map.init())
+    .pipe(sass().on('error', sass.logError))
     .pipe(source_map.write())
     .pipe(gulp.dest('TheChain'));
 });

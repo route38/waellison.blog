@@ -12,11 +12,11 @@
     %link{href: "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css", rel: "stylesheet", type: "text/css"}
     %link{href: "/TheChain/TheChain.css", rel: "stylesheet", type: "text/css"}
 
-    {% if page.supplementary_css != empty %}
+    {% if page.supplementary_css %}
     %link{href: "/assets/styles/{{ page.supplementary_css }}.css", rel: "stylesheet", type: "text/css"}
     {% endif %}
 
-    {% if page.image != empty %}
+    {% if page.image %}
     :css
       .post-hero { background-image: url({{ page.image }}); }
     {% endif %}
@@ -28,18 +28,10 @@
       .blog
         %main.content
           {{ content }}
-      .ad
-        %p.chain-vs
-          %em Advertisement
-        %script{async: "", src: "//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"}
-        %ins.adsbygoogle{style: "display:block", data: {'ad-client' => %"ca-pub-5345563363648190", 'ad-slot' => "3975029663", %'ad-format' => "auto"}}
-        :javascript
-          (adsbygoogle = window.adsbygoogle || []).push({});
       %footer.site-footer
         {% include footer.html %}
 
     -# We have to load webfontloader synchronously for it to work in the below scripts.
-
     %script{src: "//ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"}
     %script{src: "//ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"}
     %script{src: "/TheBall/TheBall.js"}
