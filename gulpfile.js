@@ -10,7 +10,7 @@
 
 const gulp          = require('gulp');
 const gutil         = require('gulp-util');
-const sass          = require('gulp-ruby-sass');
+const sass          = require('gulp-sass')(require('sass'));
 const coffee_script = require('gulp-coffee');
 const haml          = require('gulp-ruby-haml');
 const source_map    = require('gulp-sourcemaps');
@@ -20,7 +20,6 @@ const uglify        = require('gulp-uglify');
 const child         = require('child_process');
 const clean_css     = require('gulp-clean-css');
 const browser_sync  = require('browser-sync').create();
-
 const style_root    = 'TheChain/TheChain.sass';
 const scripts       = 'TheBall/*.coffee';
 const scaffolds     = '_haml/*.haml';
@@ -29,6 +28,19 @@ const scaffolds     = '_haml/*.haml';
 // RubyGems directory, must be on your PATH.
 var jekyll_build = function() {
   const jekyll = child.spawn('jekyll', ['build']);
+
+  const jekyll_logger = (buffer) => {
+    buffer.toString()
+      .split(/\n/)
+      .forEach((message) => gutil.log('build: ' + message));
+  };
+
+  jekyll.stdout.on('data', jekyll_logger);
+  jekyll.stderr.on('data', jekyll_logger);
+}
+
+var jekyll_serve = () => {
+  const jekyll = child.spawn('jekyll', ['serve', '--watch'])
 
   const jekyll_logger = (buffer) => {
     buffer.toString()
@@ -74,24 +86,23 @@ gulp.task('sass-lint', () => {
 
 // Build Sass, development-style.
 gulp.task('sass-debug', ['sass-lint'], () => {
-  sass(style_root, {sourcemap: true})
-    .on('error', sass.logError)
+  return gulp.src(style_root)
+    .pipe(sass({sourcemap: true}).on('error', sass.logError))
     .pipe(source_map.write())
     .pipe(gulp.dest('TheChain'));
 });
 
 // Build Sass, deployment-style.
 gulp.task('sass', ['sass-lint'], () => {
-  sass(style_root)
-    .on('error', sass.logError)
-    .pipe(clean_css())
+  return gulp.src(style_root)
+    .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest('TheChain'));
 });
 
 // Build the Haml scaffolds and dump them into _includes.
 gulp.task('haml', function() {
-  gulp.src(scaffolds)
-    .pipe(haml().on('error', function(e) { console.log(e.message)}))
+  return gulp.src(scaffolds)
+    .pipe(haml().on('error', function(e) { console.log(e.message) }))
     .pipe(gulp.dest('_includes'));
 });
 
@@ -103,6 +114,7 @@ gulp.task('watch', ['haml', 'sass-debug', 'scripts-debug'], () => {
   gulp.watch(scaffolds, ['haml']);
   gulp.watch('TheChain/**/*.s{a,c}ss', ['sass-debug']);
   gulp.watch(scripts, ['scripts-debug']);
+  jekyll_serve();
 });
 
 // So that the tasks are run once before the watch is initiated, the

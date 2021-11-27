@@ -8,7 +8,7 @@ group :layout do
 end
 
 group :styling do
-  gem 'sass'
+  gem 'sassc'
   gem 'bourbon'
   gem 'neat'
   gem 'bitters'
@@ -17,14 +17,13 @@ end
 group :jekyll_and_deps do
   gem 'gemoji'
   gem 'rouge'
-  gem 'RedCloth'
-  gem 'rdiscount'
   gem 'nokogiri'
   gem 'mercenary'
   gem 'therubyracer', :platforms => :ruby
   gem 'liquid'
   gem 'jekyll'
   gem 'git'
+  gem 'webrick'
 end
 
 ## JEKYLL PLUGINS AVAILABLE AS GEMS

@@ -47,7 +47,7 @@ defaults:
       image: "//files.tnwae.us/heroes/the_desktop.jpg"
       coffee: "Yes"
 
-markdown: rdiscount
+#markdown: rdiscount
 encoding: UTF-8
 exclude: 
   - "node_modules"
