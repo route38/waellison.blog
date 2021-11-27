@@ -12,6 +12,10 @@
     %link{href: "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css", rel: "stylesheet", type: "text/css"}
     %link{href: "/TheChain/TheChain.css", rel: "stylesheet", type: "text/css"}
 
+    {% if page.supplementary_css != empty %}
+    %link{href: "/assets/styles/{{ page.supplementary_css }}.css", rel: "stylesheet", type: "text/css"}
+    {% endif %}
+
     {% if page.image != empty %}
     :css
       .post-hero { background-image: url({{ page.image }}); }

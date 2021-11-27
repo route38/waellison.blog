@@ -1,12 +1,11 @@
 ---
 layout: post
-title: "Welcome to 2018!"
-image: "https://files.tnwae.us/heroes/ktown.jpg"
+title: "Welcome Back"
+image: "/art/heroes/ideapad-keyboard.jpg"
 description: "Goals for the coming year."
-music: "Sara Bareilles: Chasing the Sun"
-coffee: "None now, thanks"
-mood: "Determined"
-category: Life
+music: "M&ouml;tley Cr&uuml;e: Home Sweet Home"
+coffee: "Starbucks Blonde"
+category: Work
 ---
 
 It's not usually my place to post about my life here on vsdev, and in

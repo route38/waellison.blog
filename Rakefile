@@ -6,9 +6,9 @@ namespace :site do
     system "gulp"
   end
 
-  desc "Build the site, copy it to the local server, and watch for changes."
+  desc "Build the site and watch for changes."
   task :serve do
-    system "jekyll build --watch -d /var/www/html"
+    system "gulp"
   end
 
   desc "Clean up the build products and the server directory."
@@ -16,46 +16,34 @@ namespace :site do
     site_clean
   end
 
-  desc "Run Gulp and serve the site concurrently."
-  multitask :preview => [:gulp_preview, :serve] do
-    site_clean
-  end
-
-  task :default => [:preview]
-    system "jekyll clean"
-    system "./cleanup.sh"
-  end
-
-  desc "Run Gulp and serve the site concurrently."
-  multitask :preview => [:gulp_preview, :serve]
-
   desc "Build the site and its assets."
-  task :build do
+  task :build => [:clean] do
     system "gulp jekyll"
   end
 
   desc "Deploy the site to the production server."
-  task :deploy => [:build] do
+  task :deploy => [:clean, :build] do
     system "./deploy.sh"
   end
+
+  task :default => [:clean, :build]
 end
 
 def site_clean
   system "jekyll clean"
-  system "./cleanup.sh"
 end
 
 namespace :deps do
   desc "Update build dependencies."
   task :update do
     system "bundle update"
-    system "yarn upgrade"
+    system "npm update"
   end
 
-  desc "Install build dependencies.  Install Bundle (Ruby) and Yarn (NPM) first."
+  desc "Install build dependencies."
   task :init do
     system "bundle install"
-    system "yarn install"
+    system "npm install"
   end
 end
 

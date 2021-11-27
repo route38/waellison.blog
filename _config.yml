@@ -1,8 +1,8 @@
 # Bloggy particulars
 highlighter: "rouge"
 permalink: "/:year/:month/:title"
-name: "Very Special Developments"
-description: "technical ramblings by an ex-technologist"
+name: "Route 38"
+description: "Insane blogging action since 2012"
 future: false
 
 plugins: ["jekyll-paginate"]
@@ -16,27 +16,24 @@ sass:
   sass_dir: TheChain
   style: compressed
 
-url: https://vsdev.org
-paginate: 10
+url: https://rt38.net
+paginate: 7
 excerpt_separator: "\n\n"
 
 # Personal particulars
 person:
-  name: W. Anthony Ellison
-  email: mail@tnwae.us
-  occupation: Rubyist &amp; Blogger
-  phone: 865-730-2564
+  name: William Ellison
+  email: waellison@gmail.com
+  occupation: Pythonista &amp; Blogger
+  phone: 865-789-7765
 
 social:
   networks:
     linkedin:  tnwae
-    pinterest: t90photog
     github:    tnwae
-    twitter:   tnwae
     email:     mail@tnwae.us
   options:
     email:     envelope-o
-    pinterest: pinterest-p
 
 defaults:
   -
@@ -44,7 +41,7 @@ defaults:
       path: ""
     values:
       author: "wae"
-      image: "//files.tnwae.us/heroes/the_desktop.jpg"
+      image: "/art/heroes/the_desktop.jpg"
       coffee: "Yes"
 
 #markdown: rdiscount

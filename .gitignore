@@ -1,11 +1,12 @@
 _site
+_includes
 *.swp
 *~
 Thumbs.db
 Gemfile.lock
-yarn.lock
 vendor
 .sass-cache
+.jekyll-cache
 jrowl.rb
 .DS_Store
 ._*
@@ -22,4 +23,5 @@ TheBall/TheBall.js
 .gitignore
 .directory
 node_modules
+package-lock.json
 

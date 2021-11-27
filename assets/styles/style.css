@@ -1,0 +1,8 @@
+#footer ul li {
+  margin-right: 0;
+}
+
+.footer-nav li:not(:last-child)::after {
+  content: " \2726 ";
+}
+
