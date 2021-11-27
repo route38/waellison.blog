@@ -26,30 +26,31 @@ header.site-header
   color: $chain-white
   padding: 0 1.5rem
   font-family: $chain-sans
-  .title
-    font-weight: 700
-    text-decoration: none
-    font-size: $chain-h1
-    line-height: $chain-h1 * 1.25
-    margin: 1rem 0 0 0
-    a
-      color: $chain-purple
-      &:hover
-        text-decoration: none
-  .slogan
-    text-transform: lowercase
-    color: $chain-white
-    @include egg
-      display: none
-    padding: 0
-    margin: 1rem 0
-    font-size: $chain-h5
-    &:before, &:after
-      color: $chain-purple
-    &:before
-      content: "»"
-    &:after
-      content: "«"
+  .blurb
+    .title
+      font-weight: 700
+      text-decoration: none
+      font-size: $chain-h1
+      line-height: $chain-h1 * 1.25
+      margin: 1rem 0 0 0
+      a
+        color: $chain-purple
+        &:hover
+          text-decoration: none
+    .slogan
+      text-transform: lowercase
+      color: $chain-white
+      @include egg
+        display: none
+      padding: 0
+      margin: 1rem 0
+      font-size: $chain-h5
+      &:before, &:after
+        color: $chain-purple
+      &:before
+        content: "»"
+      &:after
+        content: "«"
   .navbar
     display: inline-block
     menu
