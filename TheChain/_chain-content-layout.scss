@@ -21,7 +21,7 @@
 // the background color and the behavior of the breakpoints.
 ///////////////////////////////////////////////////////////////////////
 @mixin chain-container-pad {
-  padding: 0 15px;
+  padding: 0 1rem;
 }
 
 ///////////////////////////////////////////////////////////////////////
@@ -38,7 +38,7 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  background-color: $chain-gray;
+  background-color: $chain-black;
 }
 
 ///////////////////////////////////////////////////////////////////////
@@ -48,13 +48,13 @@ body {
   .container {
     margin: 0 auto;
     @include bulbasaur {
-      width: 540px;
+      width: 500px;
     }
     @include ivysaur {
-      width: 720px;
+      width: 700px;
     }
     @include venusaur {
-      width: 860px;
+      width: 900px;
     }
   }
 }
@@ -98,6 +98,7 @@ body {
 // .sidebar's flex figure to get the proportion (in my case, 75%) of
 // content to sidebar.
 .content {
+  margin-top: 1rem;
   flex: 3 0 0;
   @include chain-container-pad;
 }

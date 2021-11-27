@@ -32,7 +32,7 @@
 ///////////////////////////////////////////////////////////////////////
 // Extra small, for phones and ancient computers.  Also for SDTV.
 @mixin egg {
-  @media (max-width: 767px) {
+  @media (max-width: 639px) {
     @content;
   }
 }
@@ -41,7 +41,7 @@
 // Small, for older tablets, phablets, slightly less ancient computers,
 // and other small devices.
 @mixin bulbasaur {
-  @media (min-width: 768px) {
+  @media (min-width: 640px) {
     @content;
   }
 }
@@ -49,7 +49,7 @@
 //////////////////////////////////////////////////////////////////////
 // Medium, for most PCs at sane viewing widths, and tablets.
 @mixin ivysaur {
-  @media (min-width: 900px) {
+  @media (min-width: 800px) {
     @content;
   }
 }
@@ -57,7 +57,7 @@
 //////////////////////////////////////////////////////////////////////
 // Large, for larger tablets and big PCs at large viewing widths.
 @mixin venusaur {
-  @media (min-width: 1152px) {
+  @media (min-width: 1024px) {
     @content;
   }
 }
