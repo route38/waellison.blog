@@ -1,0 +1,44 @@
+!!!
+%html{lang: "en"}
+  %head
+    %meta{charset: "utf-8"}
+    %title= "{{ site.name }} | {{ page.title }}"
+
+    -# Responsive stuff
+    %meta{content: "IE=edge", "http-equiv" => "X-UA-Compatible"}
+    %meta{content: "width=device-width, initial-scale=1.0", name: "viewport"}
+    -# End
+
+    %link{href: "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css", rel: "stylesheet", type: "text/css"}
+    %link{href: "/TheChain/TheChain.css", rel: "stylesheet", type: "text/css"}
+
+    {% if page.image != empty %}
+    :css
+      .post-hero { background-image: url({{ page.image }}); }
+    {% endif %}
+    -# End
+  %body.chain
+    .site.container
+      %header.site-header
+        {% include header.html %}
+      .blog
+        %main.content
+          {{ content }}
+        %aside.sidebar
+          {% include sidebar.html %}
+      %footer.site-footer
+        {% include footer.html %}
+
+    -# We have to load webfontloader synchronously for it to work in the below scripts.
+
+    %script{src: "//ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"}
+    %script{src: "//ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"}
+    %script{src: "/TheBall/TheBall.js"}
+
+    :javascript
+      WebFont.load({
+        google: {
+          families: ['Cormorant Garamond:400,400italic,700',
+                     'Source Code Pro']
+        }
+      });

@@ -1,0 +1,69 @@
+# Bloggy particulars
+highlighter: "rouge"
+permalink: "/updates/:year/:month/:title"
+name: "tnwae.us"
+description: "Hey, look, a blog! since 2016"
+future: false
+
+plugins: ["jekyll-paginate"]
+
+collections:
+  contributors:
+    output: true
+    permalink: "/authors/:path/"
+
+sass:
+  sass_dir: TheChain
+  style: compressed
+
+url: https://tnwae.us
+paginate: 10
+excerpt_separator: "\n\n"
+paginate_path: "/updates/page:num/"
+
+# Personal particulars
+person:
+  name: W. Anthony Ellison
+  email: mail@tnwae.us
+  occupation: Rubyist &amp; Blogger
+  phone: 865-730-2564
+
+social:
+  networks:
+    linkedin:  tnwae
+    pinterest: t90photog
+    github:    tnwae
+    twitter:   tnwae
+    email:     mail@tnwae.us
+  options:
+    email:     envelope-o
+    pinterest: pinterest-p
+    github:    github-alt
+
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      author: "wae"
+      type: blog
+      image: "/art/lazy.png"
+
+markdown: rdiscount
+encoding: UTF-8
+exclude: 
+  - "node_modules"
+  - "gulpfile.js"
+  - "Gemfile"
+  - "Rakefile"
+  - "Gemfile.lock"
+  - "deploy.sh"
+  - "cleanup.sh"
+
+# Other configs
+rdiscount:
+  extensions:
+    - autolink
+    - footnotes
+    - smart
+

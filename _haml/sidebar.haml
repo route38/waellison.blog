@@ -1,0 +1,16 @@
+.widget.announce
+  %h3 Hey!
+  :markdown
+    **I'm looking for work, and _you can help_!**  If you know of a good
+    opportunity that fits [this resume](/resume) in the Knoxville area,
+    email <mail@tnwae.us>.  I'm after clerical and/or administrative
+    work, but I'm willing to interview for nearly anything if it's
+    interesting and I'm qualified.
+
+.widget.recent-posts
+  %h3 Recent Updates
+  %ul
+    {% for mypost in site.posts | limit: 5 %}
+    %li
+      %a{href: "{{ mypost.url }}", title: "{{ mypost.date | date_to_string }}"} {{ mypost.title }}
+    {% endfor %}
