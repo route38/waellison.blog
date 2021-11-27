@@ -1,3 +1,5 @@
+task :default => ["site:preview"]
+
 namespace :site do
   desc "Only run Gulp previews."
   task :gulp_preview do
@@ -18,7 +20,14 @@ namespace :site do
   multitask :preview => [:gulp_preview, :serve] do
     site_clean
   end
+
   task :default => [:preview]
+    system "jekyll clean"
+    system "./cleanup.sh"
+  end
+
+  desc "Run Gulp and serve the site concurrently."
+  multitask :preview => [:gulp_preview, :serve]
 
   desc "Build the site and its assets."
   task :build do

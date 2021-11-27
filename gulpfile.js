@@ -101,7 +101,7 @@ gulp.task('jekyll', ['sass', 'scripts', 'haml'], jekyll_build);
 // Build everything and watch for changes.  This is for debug builds.
 gulp.task('watch', ['haml', 'sass-debug', 'scripts-debug'], () => {
   gulp.watch(scaffolds, ['haml']);
-  gulp.watch('TheChain/**/*.sass', ['sass-debug']);
+  gulp.watch('TheChain/**/*.s{a,c}ss', ['sass-debug']);
   gulp.watch(scripts, ['scripts-debug']);
 });
 
@@ -111,3 +111,4 @@ gulp.task('watch', ['haml', 'sass-debug', 'scripts-debug'], () => {
 // Gulp and roll those changes into its site build.  Yes, this does
 // lengthen the builds somewhat, but the tradeoff is apt, I think.
 gulp.task('default', ['haml', 'sass-debug', 'scripts-debug', 'watch']);
+

@@ -3,7 +3,7 @@ layout: portfolio
 title: "Colophon"
 description: "How tnwae.us was made, from server to surfer and from film grains to written posts. (Photo: tnwae.us)"
 permalink: "/colophon/"
-image: "/art/desk.jpg"
+image: "/art/heroes/desk.jpg"
 ---
 
 This site is written and produced by W. Anthony Ellison.  I do my own
@@ -13,98 +13,142 @@ to get away with ~~being lazy~~ not doing so.
 
 ## Type
 
-This site is set using _Cormorant Garamond_ by Christian Thalmann.
-Monospaced text is set in _Source Code Pro_ by Adobe.
+This site is set in _Alegreya_ by Huerta Tipográfica and _Montserrat_ by
+Julieta Ulanovsky.  Monospaced text is set in _PT Mono_ by Paratype.
 
 Icons originate from _Font Awesome_ by Dave Gandy and contributors.
 
 ## Tools
 
-As far as software goes, I install this minimal base on every computer I
-use on a regular basis, irrespective of OS:
+I have gone to great pains as of early 2018 to simplify my computing
+environment, though my work in this area is forever ongoing.  For legacy
+software, I run three legacy operating systems, while for day-to-day
+computing, I run two more, and I run two different server OSes as well.
 
-* GNU Emacs (24.3 or later)
-* LibreOffice (Linux) or Microsoft Office (Windows/Mac)
-* Mozilla Thunderbird
-* Google Chrome
-* iTunes (Windows/Mac)
-* f.lux
-* GnuPG
-* PuTTY (Windows only)
-* GIMP
-* Inkscape
+My usual client OSes are Microsoft Windows 10 and Arch Linux.  Legacy systems
+I use include Mac OS 9.2.2, Mac OS X 10.7.5, and Microsoft Windows 2000 SP4.
+And on the server, I run Debian and Ubuntu Server.  I also use an iPhone that
+runs the latest version of iOS 11.
 
-In addition, some other tools I use include the Ruby scripting language,
-`zsh` interactive shell, the usual Unix command line tools, and -- only
-on my development server -- Jekyll and Gulp.
+As far as hardware goes, I run a custom-built desktop and server, two Apple
+laptops, and two Lenovo laptops.  There's more information about my
+[computers](/computers) elsewhere on the site.
 
-My primary computer is a 2009 Intel X58 workstation with the Intel Xeon
-X5650 processor and 24 GB of RAM, running Slackware Linux 14.2 and
-Windows 10 Pro.  Having tried it, I rather like the Windows Subsystem
-for Linux, though I still prefer running Linux directly rather than
-using a compatibility layer.  The ample memory makes editing large
-images and working with virtual machines a breeze.
+My toolchain is larger than I thought it to be and consists of a mix of
+proprietary and free tools.
 
-My primary laptop is a Google Chromebook Pixel, the 2013 one, running
-Arch Linux.  It has an Intel Core i5-3427U processor and 4 GB of RAM.
-
-My vinyl ripping station and LaTeX toaster is a 2008 MacBook, running an
-Intel Core 2 Duo T8100 processor and 4 GB of RAM with Mac OS X 10.7.5
-"Lion."
-
-My dedicated Windows box (for MS Office, Edge, MSIE, and iTunes) is a
-Lenovo ThinkPad X200 based on the Intel Core 2 Duo P8600 and running
-Windows 10.
-
-Lastly, my file server is a Q77-based mini-ITX computer based on the
-Intel Core i3-2100 processor and running Debian Linux 8.7 with
-`netatalk` and Samba file sharing.
-
-My toys include several PowerPC and 68k Macs, all of them running old
-versions of OS X and pre-OS X operating systems.
-
-## Mobile Stuff
-
-My cell phone is an Apple iPhone 6S running the beta of iOS 11.
-
-My usual tablet is a Nextbook Flexx 10.1 running Windows 10.  I also
-have a 2013 Nexus 7 running Android 6, and I occasionally carry a
-Nintendo 3DS XL.
-
-I also have way too many cameras.
+<ul class='chain-columnar2'>
+  <li>Operating Systems
+    <ul>
+      <li>Microsoft Windows 10
+      <li>Microsoft Windows 2000
+      <li>Debian Linux
+      <li>macOS 10.7.5 "Lion"
+      <li>Arch Linux
+    </ul>
+  </li>
+  <li>Developer Tools
+    <ul>
+      <li>Sublime Text
+      <li>NetBeans
+      <li>Z Shell
+      <li>Git
+      <li>Jekyll
+      <li>Gulp
+      <li>Rake
+      <li>gcc/gdb
+    </ul>
+  </li>
+  <li>Email, Office, and Internet
+    <ul>
+      <li>Google Chrome
+      <li>Microsoft Word 2016
+      <li>Microsoft Excel 2016
+      <li>Microsoft Outlook 2016
+    </ul>
+  </li>
+  <li>Cloud Services
+    <ul>
+      <li>GitHub
+      <li>Gmail
+      <li>Microsoft OneDrive
+      <li>Dropbox
+      <li>Apple Music
+    </ul>
+  </li>
+  <li>Multimedia
+    <ul>
+      <li>iTunes
+      <li>CCCP
+    </ul>
+  </li>
+  <li>3D and Photo
+    <ul>
+      <li>Adobe Photoshop CC
+      <li>Adobe Lightroom CC
+      <li>Adobe Illustrator CS2
+      <li>Adobe DNG Converter
+      <li>VueScan
+      <li>DAZ Studio
+      <li>DAZ Hexagon
+      <li>DAZ Bryce
+      <li>LuxRender
+      <li>Luxus for Studio
+      <li>NVIDIA Iray
+    </ul>
+  </li>
+  <li>Mobile Apps
+    <ul>
+      <li>Apple Music
+      <li>Simplenote
+      <li>Safari
+      <li>Strava
+      <li>Microsoft Outlook
+    </ul>
+  </li>
+  <li>Chrome Extensions
+    <ul>
+      <li>uBlock Origin
+      <li>LastPass
+    </ul>
+  </li>
+</ul>
 
 ## Server Software
 
-`tnwae.us` is hosted on a Linode virtual private server.  I use Ubuntu
-Linux and Apache to host my sites, and MariaDB as my backing store for
-WordPress.
+VSDev is hosted by [Linode](https://linode.com) at their datacenter in
+Dallas, Texas, centrally located for most of North America.  It is powered
+by Ubuntu Server with Apache, MariaDB, and PHP7 though this site only needs
+an HTTP server since it is built with Jekyll rather than WordPress.
 
 ## Production Notes
 
-`tnwae.us` is prepared on my cloud development server.  I test for rendering
-performance in Chrome and Firefox, and in Mobile Safari on iOS 11.
+VSDev is prepared on a virtual machine running Debian, with working state
+stored backed up to GitHub and my local file server.  Jekyll is the engine
+powering the site, though I use an asset pipeline external to Jekyll via
+the Gulp library for Node.  Most operations only require the use of Rake,
+via [a custom Rakefile](https://github.com/tnwae/vsdev.org/blob/master/Rakefile),
+to perform.  Deployment is performed through a shell script that only requires
+`rsync` to run.
 
-My Jekyll environment:
+My Jekyll/Gulp environment includes the following libraries and conventions:
 
 * Markdown: RDiscount
 * Highlighting: Rouge
-* Asset pipeline: A Gulpfile external to Jekyll
-* Templates: Haml
-* Scripts: CoffeeScript
-* Stylesheets: Sass
-* Deployment: `rsync`
-* Build system (such as it is): Rake
+* Asset pipeline: External (via Gulp)
+* Templates: Haml compiled to HTML5
+* Scripts: CoffeeScript compiled to JavaScript
+* Stylesheets: Sass compiled to CSS3
 
-I wrote the template myself, but it was, at least initially, largely
-based on the default Jekyll template from the old 1.x branch.  Post text
-is written in Markdown.
-
-The theme is based on a framework called _The Chain_, which is a Sass
-theme framework I wrote for this site.  It uses the latest CSS
-technologies such as flexbox and hyphenation to achieve a simple, yet
-sophisticated, appearance.
+The theme is based on a framework called _The Chain_, which is a Sass theme
+framework I wrote for this site.  It uses the latest CSS technologies such as
+flexbox and hyphenation to achieve a simple, yet sophisticated, appearance.
 
 ### Web standards
 
 Web standards are vitally important.  If this site looks like crap in your
-chosen browser, choose a different browser.
+chosen browser, choose a different browser.  (Seriously, they're all at
+least decent these days, even Microsoft Edge.  There's no excuse not to
+use a good browser.)  If you still use Internet Explorer, I will laugh
+at you.
+

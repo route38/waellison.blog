@@ -1,8 +1,8 @@
 # Bloggy particulars
 highlighter: "rouge"
-permalink: "/updates/:year/:month/:title"
-name: "tnwae.us"
-description: "Hey, look, a blog! since 2016"
+permalink: "/:year/:month/:title"
+name: "Very Special Developments"
+description: "technical ramblings by an ex-technologist"
 future: false
 
 plugins: ["jekyll-paginate"]
@@ -16,10 +16,9 @@ sass:
   sass_dir: TheChain
   style: compressed
 
-url: https://tnwae.us
+url: https://vsdev.org
 paginate: 10
 excerpt_separator: "\n\n"
-paginate_path: "/updates/page:num/"
 
 # Personal particulars
 person:
@@ -38,7 +37,6 @@ social:
   options:
     email:     envelope-o
     pinterest: pinterest-p
-    github:    github-alt
 
 defaults:
   -
@@ -46,8 +44,8 @@ defaults:
       path: ""
     values:
       author: "wae"
-      type: blog
-      image: "/art/lazy.png"
+      image: "//files.tnwae.us/heroes/the_desktop.jpg"
+      coffee: "Yes"
 
 markdown: rdiscount
 encoding: UTF-8
