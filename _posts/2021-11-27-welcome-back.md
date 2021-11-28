@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "First Post!"
-image: "/art/heroes/ideapad-keyboard.jpg"
 music: "M&ouml;tley Cr&uuml;e: Home Sweet Home"
 coffee: "Starbucks Blonde"
 category: Work
@@ -37,7 +36,7 @@ months.
     <li>C, Ada, and Unix</li>
     <li>Microsoft Azure</li>
     <li>Amazon Web Services</li>
-    <li>HTML/CSS, Bootstrap, Haml, and Sass</li>
+    <li>HTML &amp; CSS</li>
     <li>Jekyll</li>
     <li>Docker &amp; Kubernetes</li>
     <li>Firefox</li>
