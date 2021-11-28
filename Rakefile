@@ -6,14 +6,14 @@ namespace :site do
     system "gulp"
   end
 
-  desc "Build the site and watch for changes."
-  task :serve do
-    system "gulp"
-  end
-
   desc "Clean up the build products and the server directory."
   task :clean do
     site_clean
+  end
+
+  desc "Build the site and watch for changes."
+  task :serve => [:clean] do
+    system "gulp"
   end
 
   desc "Build the site and its assets."
