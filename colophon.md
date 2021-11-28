@@ -68,31 +68,17 @@ proprietary and free tools.
 
 ## Server Software
 
-_Route 38_ is hosted by Amazon Simple Storage Service ("S3").
+_Route 38_ is hosted by Amazon Cloudfront.  I build the site using AWS Amplify,
+which is by far the easiest way I've yet found to deploy a Jekyll site to the
+cloud using continuous integration.
 
 ## Production Notes
 
-_Route 38_ is prepared on my Fedora laptop using the latest revision of a
-homegrown asset pipeline that builds Sass and Haml externally and folds them
-into standard HTML and CSS expected by Jekyll.  I have set things up to where
-the entire pipeline can be invoked using `rake`, but this has the following
-external dependencies:
-
-* Ruby
-* Jekyll
-* Haml
-* Node v11.15 (required for Gulp)
-* Gulp
-* Several Ruby and Node libraries
-
-I am currently working on a rewrite of the site's CSS using the latest CSS
-features and, most notably, removing the dependency upon Sass.  _The Chain_, the
-former CSS framework that powered this site's appearance, was a dumpster fire
-with nettlesome dependencies of its own, and using raw CSS -- which now sports
-most of the features I once relied upon Sass to provide -- removes a build step
-and makes the site easier to deploy.  My next goal is to remove the Haml
-templates and revert back to raw HTML -- which will remove the need for Gulp,
-allowing me to have a pure-Ruby workflow with no JS dependencies (since I won't need Gulp to build the scaffolds).
+_Route 38_ is prepared on my Fedora laptop using the remnants of my former
+asset pipeline.  I use plain old HTML and CSS for the styling and layout
+of the site, meaning that there are no nettlesome external dependencies like
+there used to be.  The toolchain is thus condensible into just two major
+dependencies: Ruby and Jekyll.
 
 This workflow long predates my involvement with the Python language, but it
 works (and quite well at that), so I've no intention of changing it solely in

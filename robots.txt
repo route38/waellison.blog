@@ -2,5 +2,5 @@
 layout: none
 ---
 User-agent: *
-Disallow: /js/
 Disallow: /art/
+Disallow: /assets/
