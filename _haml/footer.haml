@@ -1,21 +1,15 @@
-.copyright.meta
-  %p.chain-sm
-    Copyright &copy; 2012-2021 by
-    = succeed "." do
-      %a{href: "//tnwae.us"} William Ellison
-    All rights reserved.
-    %br
-    %a{href: "/terms"} Terms
-    &bull;
-    %a{href: "/taxonomy"} Index
-    &bull;
-    %a{href: "/colophon"} Colophon
-    &bull;
-    Valid
-    %i.fa.fa-html5
-    and
-    %i.fa.fa-css3
+%footer#site-footer
+  .copyright
+    %p.meta
+      Copyright &copy; 2012-2021 by
+      = succeed "." do
+        %a{href: "//rt38.net"} William Ellison
+      %br
+      %a{href: "/terms"} Terms &amp; Conditions
+      &bull;
+      %a{href: "/taxonomy"} Index
+      &bull;
+      %a{href: "/colophon"} Colophon
 
-.social
-  %div.hidden-print.socialbox
+  .social.hidden-print
     {% social_networks %}

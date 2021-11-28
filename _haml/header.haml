@@ -1,17 +1,12 @@
-.blurb
-  %p.title
-    %a{href: "/"} {{ site.name }}
-  %p.slogan
-    {{ site.description }}
-
-%nav
-  .navbar
+%header#site-header
+  %nav.navbar
+    %img.brand{src: "/art/logo.png", alt: "{{ site.name }} logo"}
     %menu
       %li
-        %a.extra{href: "/authors/wae", title: "A little bit about me."} About Me
-      %li.hireme
-        %a.extra{href: "/resume", title: "Check out my resume!"} Hire Me
+        %a{href: "/", title: "Return to the main page."} Blog
       %li
-        %a.extra{href: "//github.com/tnwae", title: "Use the source, Luke."} GitHub
+        %a{href: "/authors/wae", title: "A little bit about me."} About Me
       %li
-        %a.extra{href: "//linkedin.com/in/tnwae", title: "Network with me?"} LinkedIn
+        %a{href: "/resume", title: "Check out my resume!"} Hire Me
+      %li
+        %a{href: "/portfolio", title: "See some of the things I've done."} Portfolio
