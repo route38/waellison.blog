@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html lang='en'>
-<head>
-<meta charset='utf-8'>
-<meta generator='Jekyll 4.2.1'>
-<title>{{ site.name }} | {{ page.title }}</title>
-<meta content='width=device-width, initial-scale=1.0' name='viewport'>
-<link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
-<link href='/assets/styles/style.css' rel='stylesheet' type='text/css'>
-{% if page.supplementary_css %}
-<link href='/assets/styles/{{ page.supplementary_css }}.css' rel='stylesheet' type='text/css'>
-{% endif %}
-</head>
-<body>
-{% include header.html %}
-<main id='main-content'>
-{{ content }}
-</main>
-{% include footer.html %}
-</body>
+    <head>
+        <meta charset='utf-8'>
+        <meta content='width=device-width, initial-scale=1.0' name='viewport'>
+        <meta content='Jekyll 4.2.1' name='generator'>
+        <title>{{ site.name }} | {{ page.title }}</title>
+        <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
+        <link href='/assets/styles/style.css' rel='stylesheet' type='text/css'>
+        <link href='/feed.xml' rel='alternate' type='application/rss+xml' title='RSS Feed for rt38.net'>
+        {% if page.supplementary_css %}
+            <link href='/assets/styles/{{ page.supplementary_css }}.css' rel='stylesheet' type='text/css'>
+        {% endif %}
+    </head>
+    <body>
+        {% include header.html %}
+        <main id='main-content'>
+            {{ content }}
+        </main>
+        {% include footer.html %}
+    </body>
 </html>
