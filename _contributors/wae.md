@@ -4,8 +4,6 @@ description: "Web writer, businessman, and overall doer of things."
 image: "/art/heroes/pbg3-desk.jpg"
 title: About William
 ---
-# About William
-
 <span class='textsc'>William A. Ellison</span> is a software developer and
 medical billing expert living in the Knoxville, Tennessee, area in the
 southeastern United States.  Mr. Ellison is currently employed in the healthcare
