@@ -1,6 +1,6 @@
 # Bloggy particulars
 highlighter: "rouge"
-permalink: "/:year/:month/:title"
+permalink: "/:year/:title"
 name: "Route 38"
 description: "Insane blogging action since 2012"
 future: false
@@ -12,12 +12,8 @@ collections:
     output: true
     permalink: "/authors/:path/"
 
-sass:
-  sass_dir: TheChain
-  style: compressed
-
 url: https://rt38.net
-paginate: 7
+paginate: 5
 excerpt_separator: "\n\n"
 
 # Personal particulars
@@ -31,9 +27,9 @@ social:
   networks:
     linkedin:  tnwae
     github:    tnwae
-    email:     mail@tnwae.us
+    email:     waellison@gmail.com
   options:
-    email:     envelope-o
+    email:     envelope
 
 defaults:
   -
@@ -41,10 +37,8 @@ defaults:
       path: ""
     values:
       author: "wae"
-      image: "/art/heroes/the_desktop.jpg"
       coffee: "Yes"
 
-#markdown: rdiscount
 encoding: UTF-8
 exclude: 
   - "node_modules"
@@ -53,11 +47,3 @@ exclude:
   - "Rakefile"
   - "Gemfile.lock"
   - "deploy.sh"
-
-# Other configs
-rdiscount:
-  extensions:
-    - autolink
-    - footnotes
-    - smart
-

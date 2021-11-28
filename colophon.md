@@ -82,13 +82,17 @@ external dependencies:
 * Jekyll
 * Haml
 * Node v11.15 (required for Gulp)
-* Sass (via Node these days)
 * Gulp
 * Several Ruby and Node libraries
 
-The theme is based on a framework called _The Chain_, which is a Sass theme
-framework I wrote for this site.  It uses the latest CSS technologies such as
-flexbox and hyphenation to achieve a simple, yet sophisticated, appearance.
+I am currently working on a rewrite of the site's CSS using the latest CSS
+features and, most notably, removing the dependency upon Sass.  _The Chain_, the
+former CSS framework that powered this site's appearance, was a dumpster fire
+with nettlesome dependencies of its own, and using raw CSS -- which now sports
+most of the features I once relied upon Sass to provide -- removes a build step
+and makes the site easier to deploy.  My next goal is to remove the Haml
+templates and revert back to raw HTML -- which will remove the need for Gulp,
+allowing me to have a pure-Ruby workflow with no JS dependencies (since I won't need Gulp to build the scaffolds).
 
 This workflow long predates my involvement with the Python language, but it
 works (and quite well at that), so I've no intention of changing it solely in
