@@ -8,8 +8,7 @@ image: "/art/heroes/desk.jpg"
 
 ## Type
 
-This site is set in _Alegreya_ and _Alegreya Sans_ by Huerta Tipográfica.
-Monospaced text is set in _PT Mono_ by Paratype.
+This site is set in _Montserrat_ by Julieta Ulanovsky.
 
 Icons originate from _Font Awesome_ by Dave Gandy and contributors.
 
