@@ -1,11 +1,6 @@
-task :default => ["site:preview"]
+task :default => ["site:serve"]
 
 namespace :site do
-  desc "Only run Gulp previews."
-  task :gulp_preview do
-    system "gulp"
-  end
-
   desc "Clean up the build products and the server directory."
   task :clean do
     site_clean
@@ -13,12 +8,12 @@ namespace :site do
 
   desc "Build the site and watch for changes."
   task :serve => [:clean] do
-    system "gulp"
+    system "jekyll serve --watch"
   end
 
   desc "Build the site and its assets."
   task :build => [:clean] do
-    system "gulp jekyll"
+    system "jekyll build"
   end
 
   desc "Deploy the site to the production server."
@@ -37,13 +32,11 @@ namespace :deps do
   desc "Update build dependencies."
   task :update do
     system "bundle update"
-    system "npm update"
   end
 
   desc "Install build dependencies."
   task :init do
     system "bundle install"
-    system "npm install"
   end
 end
 

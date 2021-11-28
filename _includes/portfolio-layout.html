@@ -1,0 +1,22 @@
+{% if page.github %}
+{% include gh-ribbon.html %}
+{% endif %}
+<article class='post'>
+<header>
+{% if page.image %}
+<div class='post-hero'>
+<h1>
+<a href='{{ post.url }}'>{{ page.title }}</a>
+</h1>
+{% if page.description %}
+<p>{{ page.description }}</p>
+{% endif %}
+</div>
+{% else %}
+<h1>
+<a href='{{ post.url }}'>{{ page.title }}</a>
+</h1>
+{% endif %}
+</header>
+{{ content }}
+</article>
