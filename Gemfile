@@ -7,22 +7,13 @@ group :layout do
   gem 'haml'
 end
 
-group :styling do
-  gem 'sassc'
-  gem 'bourbon'
-  gem 'neat'
-  gem 'bitters'
-end
-
 group :jekyll_and_deps do
-  gem 'gemoji'
   gem 'rouge'
   gem 'nokogiri'
   gem 'mercenary'
   gem 'therubyracer', :platforms => :ruby
   gem 'liquid'
   gem 'jekyll'
-  gem 'git'
   gem 'webrick'
 end
 
