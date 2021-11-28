@@ -99,7 +99,7 @@ module Jekyll
 
         klass = "network icon-#{network_sanitized} fa fa-#{icon_name}"
         
-        retval += "    <a href='#{href}' class='#{klass}'></a>\n"
+        retval += "<a href='#{href}' class='btn #{klass}'></a>\n"
       end
       
       return "#{retval}"
