@@ -1,29 +1,20 @@
 {
-  "name": "vsdev.org",
+  "name": "Route 38",
   "version": "1.0.0",
   "description": "A website.",
-  "main": "index.js",
-  "repository": "git@github.com:tnwae/vsdev.org",
+  "main": "index.html",
+  "repository": "git@github.com:route38/rt38.net",
   "author": "William Ellison <mail@tnwae.us>",
   "license": "WTFPL",
   "dependencies": {
-    "browser-sync": "^2.27.7",
-    "child_process": "^1.0.2",
     "childprocess": "^2.0.2",
     "graceful-fs": "^4.0.0",
     "gulp": "^3.9.1",
     "gulp-clean": "^0.4.0",
     "gulp-clean-css": "^3.0.4",
     "gulp-cli": "^1.4.0",
-    "gulp-coffee": "^2.3.5",
-    "gulp-coffeelint": "^0.6.0",
     "gulp-ruby-haml": "^0.0.9",
-    "gulp-ruby-sass": "^2.1.1",
-    "gulp-sass": "^5.0.0",
-    "gulp-sass-lint": "^1.4.0",
-    "gulp-sourcemaps": "^2.6.5",
     "gulp-uglify": "^2.1.2",
-    "gulp-util": "^3.0.8",
-    "sass": "^1.43.5"
+    "gulp-util": "^3.0.8"
   }
 }
