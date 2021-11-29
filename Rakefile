@@ -8,7 +8,7 @@ namespace :site do
 
   desc "Build the site and watch for changes."
   task :serve => [:clean] do
-    system "jekyll serve --watch"
+    system "jekyll serve --future --watch"
   end
 
   desc "Build the site and its assets."

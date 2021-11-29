@@ -29,25 +29,23 @@ to my Python skills, I can program in Ruby, C++, C, and JavaScript.
 Here are some of the topics you'll find here at _Route 38_ in the coming
 months.
 
-<ul class='chain-columnar2'>
-    <li>Python, Flask, and Django</li>
-    <li>C# and ASP.NET</li>
-    <li>JavaScript and VueJS</li>
-    <li>C, Ada, and Unix</li>
-    <li>Microsoft Azure</li>
-    <li>Amazon Web Services</li>
-    <li>HTML &amp; CSS</li>
-    <li>Jekyll</li>
-    <li>Docker &amp; Kubernetes</li>
-    <li>Firefox</li>
-    <li>Thunderbird</li>
-    <li>Linux</li>
-    <li>Windows Server</li>
-    <li>PostgreSQL</li>
-    <li>Git and GitHub</li>
-    <li>Subversion</li>
-    <li>CI/CD</li>
-</ul>
+* Python, Flask, and Django
+* C# and ASP.NET
+* JavaScript and VueJS
+* C, Ada, and Unix
+* Microsoft Azure
+* Amazon Web Services
+* HTML &amp; CSS
+* Jekyll
+* Docker &amp; Kubernetes
+* Firefox
+* Thunderbird
+* Linux
+* Windows Server
+* PostgreSQL
+* Git and GitHub
+* Subversion
+* CI/CD
 
 I have a lot of interests to cover here and I expect that there will be a lot
 of posts on each one -- learning things awakens the desire inside me to
@@ -66,7 +64,7 @@ email or on LinkedIn and I'll be happy to address you -- if you are respectful,
 thoughtful, and apposite in what you have to offer.  If you solely exist to
 flame or troll, I'm going to ignore you.
 
-## Onward toward the future!
+## Onward toward the future
 
 I'll see you good people back here the next time I upload a post.  I'm anxious
 to see what comes of this experiment with the medium of blogging, and how far I
