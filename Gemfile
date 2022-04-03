@@ -11,10 +11,10 @@ group :jekyll_and_deps do
   gem 'rouge'
   gem 'nokogiri'
   gem 'mercenary'
-  gem 'therubyracer', :platforms => :ruby
   gem 'liquid'
   gem 'jekyll'
   gem 'webrick'
+  gem 'wdm', '>= 0.1.0' if Gem.win_platform?
 end
 
 ## JEKYLL PLUGINS AVAILABLE AS GEMS
