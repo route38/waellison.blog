@@ -37,15 +37,6 @@
             Bookmark the
             <a href='{{ page.permalink }}'>Permalink</a> if you wish.  This post filed under
             <a href='/taxonomy/#{{ page.category | slugify }}'>{{ page.category }}</a>.
-            {% if page.music %}
-                &bull; <i class='green fa fa-music'></i> &nbsp;{{ page.music }}
-            {% endif %}
-            {% if page.mood %}
-                &bull; <i class='purple fa fa-meh-o'></i> &nbsp;{{ page.mood }}
-            {% endif %}
-            {% if page.coffee %}
-                &bull; <i class='black fa fa-coffee'></i> &nbsp;{{ page.coffee }}
-            {% endif %}
         </p>
     </footer>
 </article>
