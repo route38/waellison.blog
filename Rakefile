@@ -18,7 +18,7 @@ namespace :site do
 
   desc "Deploy the site to the production server."
   task :deploy => [:clean, :build] do
-    system "./deploy.sh"
+    system "bash deploy.sh"
   end
 
   task :default => [:clean, :build]
