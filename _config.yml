@@ -1,8 +1,8 @@
 # Bloggy particulars
 highlighter: "rouge"
 permalink: "/:year/:title"
-name: "Route 38"
-description: "Insane blogging action since 2012"
+name: "William Ellison"
+description: "Insane blogging action since 2022"
 future: false
 
 plugins: ["jekyll-paginate"]
@@ -12,7 +12,7 @@ collections:
     output: true
     permalink: "/authors/:path/"
 
-url: https://rt38.net
+url: https://waellison.blog
 paginate: 5
 excerpt_separator: "\n\n"
 
@@ -47,3 +47,4 @@ exclude:
   - "Rakefile"
   - "Gemfile.lock"
   - "deploy.sh"
+
