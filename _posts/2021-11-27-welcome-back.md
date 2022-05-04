@@ -30,22 +30,19 @@ Here are some of the topics you'll find here at _Route 38_ in the coming
 months.
 
 * Python, Flask, and Django
-* C# and ASP.NET
-* JavaScript and VueJS
+* JavaScript and ReactJS
 * C, Ada, and Unix
 * Microsoft Azure
-* Amazon Web Services
 * HTML &amp; CSS
 * Jekyll
 * Docker &amp; Kubernetes
-* Firefox
-* Thunderbird
+* macOS
 * Linux
-* Windows Server
+* Apache
 * PostgreSQL
 * Git and GitHub
-* Subversion
 * CI/CD
+* Server Hardware
 
 I have a lot of interests to cover here and I expect that there will be a lot
 of posts on each one -- learning things awakens the desire inside me to
