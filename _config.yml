@@ -1,16 +1,11 @@
 # Bloggy particulars
 highlighter: "rouge"
 permalink: "/:year/:title"
-name: "William Ellison"
-description: "Insane blogging action since 2022"
+name: "William Ellison('s Blog)"
+description: "A Web developer in Knoxville, Tennessee"
 future: false
 
 plugins: ["jekyll-paginate"]
-
-collections:
-  contributors:
-    output: true
-    permalink: "/authors/:path/"
 
 url: https://waellison.blog
 paginate: 5
@@ -20,31 +15,11 @@ excerpt_separator: "\n\n"
 person:
   name: William Ellison
   email: waellison@gmail.com
-  occupation: Pythonista &amp; Blogger
-  phone: 865-789-7765
-
-social:
-  networks:
-    linkedin:  tnwae
-    github:    tnwae
-    email:     waellison@gmail.com
-  options:
-    email:     envelope
-
-defaults:
-  -
-    scope:
-      path: ""
-    values:
-      author: "wae"
-      coffee: "Yes"
+  occupation: Web Developer
 
 encoding: UTF-8
 exclude: 
-  - "node_modules"
-  - "gulpfile.js"
   - "Gemfile"
   - "Rakefile"
   - "Gemfile.lock"
   - "deploy.sh"
-
