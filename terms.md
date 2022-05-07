@@ -1,5 +1,5 @@
 ---
-layout: portfolio
+layout: page
 title: "Terms &amp; Conditions"
 permalink: "/terms/"
 ---
