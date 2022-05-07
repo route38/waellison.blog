@@ -1,6 +1,6 @@
 ---
 layout: default
-title: A programming blog
+title: A Python and TypeScript programming blog
 ---
 {% for post in paginator.posts %}
   <article class='post post-excerpt'>
@@ -24,8 +24,7 @@ title: A programming blog
           {% endcase %}</span>
           <span class='year'>{{ post.date | date: "%Y" }}</span>
         </time>
-        by <a href='/authors/{{ post.author }}'>{{ post.author }}</a>,
-        ca. {{ post.content | reading_time }} minute read
+        by <a href='//waellison.io' target='_blank'>William</a>
       </p>
     </header>
     <div class='excerpt'>
