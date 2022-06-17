@@ -62,7 +62,7 @@ class Foo {
 }
 
 // Bar.java
-class Bar {
+class Bar extends Foo {
   @Override
   public void saySomething() {
     System.out.println("bar");
