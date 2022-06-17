@@ -10,4 +10,4 @@ gem 'webrick'
 gem 'jekyll-sitemap'
 gem 'jekyll-paginate'
 gem 'liquid_reading_time'
-
+gem 'os'
